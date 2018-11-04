@@ -12,7 +12,7 @@ The calculator takes as input two matrices (As simple lists with row length, for
 |  Addition       |                                       |  n^2       |
 | Substraction    |                                       | n^2        |
 |  Multiplication | Strassen algorithm                    | n^(2,81)   |
-|  Determinant    | Doolittle Algorithm  LU Decomposition | n^3        |
+|  Determinant    | Doolittle Algorithm /LU Decomposition | n^3        |
 
 ### Sources:
 

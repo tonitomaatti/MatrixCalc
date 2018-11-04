@@ -34,6 +34,7 @@ Initial sources have mainly been from wikipedia:
 - https://en.wikipedia.org/wiki/LU_decomposition#Computing_the_determinant
 - https://www.geeksforgeeks.org/doolittle-algorithm-lu-decomposition/
 - Johdatus lineaarialgebraan, Osa I, Jokke Häsä, Lotta Oinonen, Johanna Rämö
+
 **For Multiplication:**
 - https://stanford.edu/~rezab/classes/cme323/S16/notes/Lecture03/cme323_lec3.pdf
 - https://en.wikipedia.org/wiki/Strassen_algorithm

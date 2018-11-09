@@ -9,8 +9,8 @@ As far as actual progress goes:
 - I made a folder for javadoc on the front page and linked to web-page version in the readme-file. I tried to add some descriptions for the classes. For some reason had a hard time getting netbeans to produce the javadoc files.
 
 - Made two (possibly quite temporary) classes just to test things out.
-    ..- __MatrixScanner__ is a way to input a matrix for now. It's done by runtime user input. Will probably change this to file input later on. I wonder if one could use excell files?
-    ..- __Addition__ takes two matrices, adds them together and returns the resulting matrix. Addition will remain in some form but will be obviously overhauled.
+    - __MatrixScanner__ is a way to input a matrix for now. It's done by runtime user input. Will probably change this to file input later on. I wonder if one could use excell files?
+    - __Addition__ takes two matrices, adds them together and returns the resulting matrix. Addition will remain in some form but will be obviously overhauled.
     
  - Made one test class to test addition when you have matrices of the same size. The class still obvioulsy fails with matrices of different sizes.
  

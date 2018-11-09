@@ -1,4 +1,4 @@
-# week 2
+# Week 2
 
 This week I tried to do a little bit of everything that was mentioned in the timetable. Unfortunately for quite a while I mistakenly thought the deadline was on sunday (which was the case on database project instead), but luckily I had time to try out some things. The mistake was all my fault of course. I should be able to catch up for next week.
 

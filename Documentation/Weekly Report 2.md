@@ -18,3 +18,5 @@ As far as actual progress goes:
 
 
 Next I will start working on classes for the actually interesting algorithms (multiplication and determinant). And hopefully start figuring out appropriate data structures.
+
+Time spent: 5 hours

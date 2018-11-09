@@ -26,8 +26,9 @@ public class MatrixScanner {
         int column = -1;
         int count = 0;
         
-        int[][] a = new int[rowLength][rowLength];
+        int[][] a = new int[rowLength][rowLength]; //user selected row length determines size
         
+        //loop: Go on until false input or matrix is full, when row is full, change to next one
         while(true){
             System.out.println("Next entry: ");
             if(!sc.hasNextInt()){
@@ -46,8 +47,6 @@ public class MatrixScanner {
                 break;
             }
         }
-        
-        System.out.println(Arrays.deepToString(a));
         
         return a;
     }

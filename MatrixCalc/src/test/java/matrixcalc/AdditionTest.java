@@ -1,0 +1,57 @@
+package matrixcalc;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+
+public class AdditionTest {
+    
+    public AdditionTest() {
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
+    }
+    
+    @Before
+    public void setUp() {
+    }
+    
+    @After
+    public void tearDown() {
+    }
+
+    
+    @Test
+    public void hello() {}
+    
+    @Test
+    public void AdditionWorksCorrectly(){
+        int[][] testMatrix = new int[2][2];
+        testMatrix[0][0] = 1;
+        testMatrix[0][1] = 2;
+        testMatrix[1][0] = 3;
+        testMatrix[1][1] = 4;
+        
+        Addition addTest = new Addition();
+        testMatrix = addTest.add(testMatrix, testMatrix);
+        
+        int[][] correctMatrix = new int[2][2];
+        correctMatrix[0][0] = 1+1;
+        correctMatrix[0][1] = 2+2;
+        correctMatrix[1][0] = 3+3;
+        correctMatrix[1][1] = 4+4;
+        
+        Assert.assertArrayEquals(testMatrix, correctMatrix);
+    }
+    
+}

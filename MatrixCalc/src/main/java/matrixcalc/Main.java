@@ -22,16 +22,33 @@ public class Main {
         
         //addition test:
         System.out.println("Enter first matrix");
-        int[][] b = ms.buildMatrix();
-        System.out.println("Enter second matrix");
-        int[][] c = ms.buildMatrix();
+        int[][] a = ms.buildMatrix();
+        //System.out.println("Enter second matrix");
+        //int[][] b = ms.buildMatrix();
+        System.out.println("lenght of a: ");
+        System.out.println(a.length);
         
-        Addition add = new Addition();
+        System.out.println("New Matrices: ");
+        System.out.println("A: ");
+        ms.print(a);
+        //System.out.println("B: ");
+        //ms.print(b);
         
-        int[][] addedMatrix = add.add(b, c);
+        //Addition add = new Addition();
         
-        System.out.println("Result of addition: ");
-        ms.print(addedMatrix);
+        //int[][] addedMatrix = add.add(b, c);
+        
+        //System.out.println("Result of addition: ");
+        //ms.print(addedMatrix);
+        
+        //Strassen:
+        int[][] kerroin = Strassen.strassenRecursive(a, a);
+        ms.print(kerroin);
+        
+        
+        //Substract
+        //int[][] substract = Substraction.substract(a, b);
+        //ms.print(substract);
         
        
         

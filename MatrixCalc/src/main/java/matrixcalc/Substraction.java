@@ -2,16 +2,17 @@
 package matrixcalc;
 
 /**
- * Adds two matrices together by simply iterating through every element
+ *
+ * Substact matrix A from B, same logic as addition
  */
-public class Addition {
+public class Substraction {
     private int[][] a;
     private int[][] b;
 
     /**
      *
      */
-    public Addition(){
+    public Substraction(){
     }
     
     /**
@@ -19,33 +20,27 @@ public class Addition {
      * @param matrixA desc
      * @param matrixB desc
      */
-    public Addition(int[][] matrixA, int[][] matrixB){
+    public Substraction(int[][] matrixA, int[][] matrixB){
         this.a = matrixA;
         this.b = matrixB;
     }
     
     /**
-     * Adds two matrices and returns the sum
+     * Substracts two matrices and returns the result
      * @param matrixA desc
      * @param matrixB desc
-     * @return the sum
+     * @return the result
      */
-    public static int[][] add(int[][] matrixA,int[][] matrixB ){
+    public static int[][] substract(int[][] matrixA,int[][] matrixB ){
         
         int[][] matrixC = new int[matrixA.length][matrixA.length];
         
         for(int i = 0; i<matrixA.length; i++){
             for(int j = 0; j<matrixA.length; j++){
-               matrixC[i][j] = matrixA[i][j] + matrixB[i][j]; 
+               matrixC[i][j] = matrixA[i][j] - matrixB[i][j]; 
             }
         }
         
         return matrixC;
     }
-    
-    
-    
-    
-
-    
 }

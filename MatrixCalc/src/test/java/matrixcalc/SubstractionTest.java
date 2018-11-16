@@ -1,5 +1,11 @@
 package matrixcalc;
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -8,10 +14,13 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-
-public class AdditionTest {
+/**
+ *
+ * @author faarao
+ */
+public class SubstractionTest {
     
-    public AdditionTest() {
+    public SubstractionTest() {
     }
     
     @BeforeClass
@@ -30,23 +39,24 @@ public class AdditionTest {
     public void tearDown() {
     }
 
+    
     @Test
-    public void AdditionWorksCorrectly(){
+    public void SubstractionWorksCorrectly(){
         int[][] testMatrix = new int[2][2];
         testMatrix[0][0] = 1;
         testMatrix[0][1] = 2;
         testMatrix[1][0] = 3;
         testMatrix[1][1] = 4;
         
-        testMatrix = Addition.add(testMatrix, testMatrix);
+        
+        testMatrix = Substraction.substract(testMatrix, testMatrix);
         
         int[][] correctMatrix = new int[2][2];
-        correctMatrix[0][0] = 1+1;
-        correctMatrix[0][1] = 2+2;
-        correctMatrix[1][0] = 3+3;
-        correctMatrix[1][1] = 4+4;
+        correctMatrix[0][0] = 1-1;
+        correctMatrix[0][1] = 2-2;
+        correctMatrix[1][0] = 3-3;
+        correctMatrix[1][1] = 4-4;
         
         Assert.assertArrayEquals(testMatrix, correctMatrix);
     }
-    
 }

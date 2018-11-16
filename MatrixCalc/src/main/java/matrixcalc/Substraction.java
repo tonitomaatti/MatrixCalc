@@ -6,25 +6,6 @@ package matrixcalc;
  * Substact matrix A from B, same logic as addition
  */
 public class Substraction {
-    private int[][] a;
-    private int[][] b;
-
-    /**
-     *
-     */
-    public Substraction(){
-    }
-    
-    /**
-     *
-     * @param matrixA desc
-     * @param matrixB desc
-     */
-    public Substraction(int[][] matrixA, int[][] matrixB){
-        this.a = matrixA;
-        this.b = matrixB;
-    }
-    
     /**
      * Substracts two matrices and returns the result
      * @param matrixA desc
@@ -40,7 +21,6 @@ public class Substraction {
                matrixC[i][j] = matrixA[i][j] - matrixB[i][j]; 
             }
         }
-        
         return matrixC;
     }
 }

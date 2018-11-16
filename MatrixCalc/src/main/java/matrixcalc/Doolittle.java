@@ -7,14 +7,7 @@ package matrixcalc;
  */
 public class Doolittle {
     
-    
-    
-    public Doolittle(int[][] input){
-        
-        
-    }
-    
-    public static double[][] decomposeU(int[][] A){
+    private static double[][] decomposeU(int[][] A){
         int size = A.length;
         double[][] L = new double[size][size];
         double[][] U = new double[size][size];
@@ -41,20 +34,14 @@ public class Doolittle {
                 L[i][k] = (A[i][k] - sum) / U[k][k];
             }
         }
-        System.out.println("Upper decomp: ");
-        MatrixScanner.printDouble(U);
-        System.out.println("Lower Decomp: ");
-        MatrixScanner.printDouble(L);
         
         return U;
     }
     
     public static double determinant(int[][] A){
         double[][] upper = decomposeU(A);
-        
         double det = 1;
         for(int i = 0; i<A.length; i++){
-            System.out.println("next for determinant: " + upper[i][i]);
             det *= upper[i][i]; 
         }
         return det;

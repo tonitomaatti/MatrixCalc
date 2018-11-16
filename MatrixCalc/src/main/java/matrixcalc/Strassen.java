@@ -6,41 +6,52 @@ package matrixcalc;
  * Strassen algorithm
  */
 public class Strassen {
-    private int[][] a;
-    private int[][] b;
     
-    public Strassen(){
+    public static int[][] multiply(int[][] A, int[][] B){
+         //expand to the power of two
+        int size = A.length;
+        int powerOfTwo = 1;
         
-    }
-    
-    public Strassen(int[][] matrixA, int[][] matrixB){
-        this.a = matrixA;
-        this.b = matrixB;
+        while(true){
+            if(powerOfTwo<size){
+                powerOfTwo *= 2;
+            }else{
+                break;
+            }
+        }
+        
+        //create expanded
+        int[][] Aexpand = new int[powerOfTwo][powerOfTwo];
+        int[][] Bexpand = new int[powerOfTwo][powerOfTwo];
+        
+        for(int i = 0; i < size; i++){
+            for(int j = 0; j < size; j++){
+                Aexpand[i][j] = A[i][j];
+                Bexpand[i][j] = B[i][j];
+            }
+        }
+        
+        int[][] C = strassenRecursive(Aexpand, Bexpand);
+        
+        //trim C back
+        int[][] Ctrimmed = new int[size][size];
+        for(int i = 0; i < size; i++){
+            for(int j = 0; j < size; j++){
+                Ctrimmed[i][j] = C[i][j]; 
+            }
+        }
+        return Ctrimmed;
     }
     
     public static int[][] strassenRecursive(int[][] A, int[][] B){
         
-        //TODO: expand matrices to the power of 2
-        
-        
-        System.out.println("start strassen");
         int length = A.length;
-        System.out.println("LENGHT: ");
-        System.out.println(length);
         
-        //If reduced to single element
+        //If reduced to single element, end of recursion
         if(length==1){
-            System.out.println("reached bottom");
-            System.out.println("A: ");
-            MatrixScanner.print(A);
-            System.out.println("B: ");
-            MatrixScanner.print(B);
             
             int[][] single = new int[1][1];
             single[0][0] = A[0][0]*B[0][0];
-            System.out.println("Result: ");
-            MatrixScanner.print(single);
-            
             return single;
         }
         
@@ -96,14 +107,6 @@ public class Strassen {
                 subM[i][j] = oldM[i+startingRow][j+startingColumn];
             }
         }    
-        
-        System.out.println("New submatix: ");
-        MatrixScanner.print(subM);
         return subM;
     }
-    
-    
-    
-    
-    
 }

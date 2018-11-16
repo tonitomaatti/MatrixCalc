@@ -4,6 +4,7 @@ Matrix calculator for school project
 Very cool, such algorithms, wow!
 
 * [Javadoc](http://tonitomaatti.github.io/MatrixCalc/javadoc/index.html)
+* [Definition](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Definition.md)
 
 ## Weekly reports:
 - [Week 1](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Weekly%20Report%201.md)

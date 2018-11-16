@@ -42,8 +42,12 @@ public class Main {
         //ms.print(addedMatrix);
         
         //Strassen:
-        int[][] kerroin = Strassen.strassenRecursive(a, a);
-        ms.print(kerroin);
+        //int[][] kerroin = Strassen.strassenRecursive(a, a);
+        //ms.print(kerroin);
+        
+        //Determinantti:
+        double deter = Doolittle.determinant(a);
+        System.out.println("Determinantti: "+deter);
         
         
         //Substract

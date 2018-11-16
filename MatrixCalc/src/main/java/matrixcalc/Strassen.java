@@ -20,6 +20,9 @@ public class Strassen {
     
     public static int[][] strassenRecursive(int[][] A, int[][] B){
         
+        //TODO: expand matrices to the power of 2
+        
+        
         System.out.println("start strassen");
         int length = A.length;
         System.out.println("LENGHT: ");

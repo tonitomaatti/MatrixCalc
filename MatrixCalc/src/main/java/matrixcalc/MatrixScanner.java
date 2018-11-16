@@ -64,4 +64,13 @@ public class MatrixScanner {
         }
     }
     
+    public static void printDouble(double[][] printable){
+        for(int i = 0; i < printable.length; i++){
+            for(int j = 0; j < printable.length; j++){
+                System.out.print(printable[i][j]+" ");
+            }
+            System.out.println("");
+        }
+    }
+    
 }

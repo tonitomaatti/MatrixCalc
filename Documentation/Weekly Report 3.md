@@ -12,7 +12,7 @@ Next I am going to improve the structure of the project (file structure, logical
 
 The most advanced java file structure used for now is 2-dimensional array int[][]. Will replace this with my own?
 
-According to jacoco, unit tests are almost 100% for everything but matrixScanner -class (and main). Didn't have time to figure out unit tests for scanner and the class is going to be replaced with more advanced input option anyway.
+According to jacoco, unit tests are almost 100% for everything but matrixScanner -class (and main). Didn't have time to figure out unit tests for scanner and the class is going to be replaced with more advanced input option anyway. Also I added jacoco html report to readme because why not?
 
 Program still fails on some obvious cases (like non-square matrices). Will have to implement checks for these.
 

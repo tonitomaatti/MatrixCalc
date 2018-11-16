@@ -2,11 +2,17 @@
 package matrixcalc;
 
 /**
- *
+ * This is an algorithm to multiply two matrices
  * Strassen algorithm
  */
 public class Strassen {
     
+    /**
+     * First expand matrices to power of two so division always works, then call for recursive strassen
+     * @param A First matrix
+     * @param B Second matrix
+     * @return Returns multiplied matrix
+     */
     public static int[][] multiply(int[][] A, int[][] B){
          //expand to the power of two
         int size = A.length;
@@ -43,7 +49,13 @@ public class Strassen {
         return Ctrimmed;
     }
     
-    public static int[][] strassenRecursive(int[][] A, int[][] B){
+    /**
+     * This is a recursive matrix multipliying algorithm
+     * @param A First expanded matrix
+     * @param B Second expanded matrix
+     * @return Returns expanded multiplied matrix
+     */
+    private static int[][] strassenRecursive(int[][] A, int[][] B){
         
         int length = A.length;
         
@@ -97,7 +109,14 @@ public class Strassen {
         return c;
     }
     
-    //creates a new subMatrix
+    /**
+     * Creates the submatrices when dividing the original to 4 parts
+     * @param oldM The large original matrix to be divided
+     * @param size The size of the new submatrix
+     * @param startingRow Where to start rows, depends on which submatrix is being created
+     * @param startingColumn Where to start columns, depends on which submatrix is being created
+     * @return returns the created submatrix
+     */
     private static int[][] createSubMatrix(int[][] oldM, int size, int startingRow, int startingColumn){
         
         int[][] subM = new int[size][size]; 

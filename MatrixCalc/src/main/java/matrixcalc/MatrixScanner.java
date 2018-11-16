@@ -1,7 +1,6 @@
 
 package matrixcalc;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -12,7 +11,7 @@ public class MatrixScanner {
     
     /**
      * Read size and elements from user input
-     * @return description: (return)
+     * @return returns a matrix build from user input
      */
     public int[][] buildMatrix(){
     
@@ -53,7 +52,7 @@ public class MatrixScanner {
     
     /**
      * print the matrix in matrixy -looking way
-     * @param printable (description printable)
+     * @param printable Matrix to be printed
      */
     public static void print(int[][] printable){
         for(int i = 0; i < printable.length; i++){
@@ -64,6 +63,10 @@ public class MatrixScanner {
         }
     }
     
+    /**
+     * Prints a double[][] type matrix
+     * @param printable The matrix to be printed
+     */
     public static void printDouble(double[][] printable){
         for(int i = 0; i < printable.length; i++){
             for(int j = 0; j < printable.length; j++){

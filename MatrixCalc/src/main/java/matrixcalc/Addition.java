@@ -5,6 +5,7 @@ package matrixcalc;
  * Adds two matrices together by simply iterating through every element
  */
 public class Addition {
+    
     /**
      * Adds two matrices and returns the sum
      * @param matrixA desc

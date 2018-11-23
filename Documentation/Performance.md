@@ -22,13 +22,9 @@ A slightly more erratic behavior.
 
 ![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/DeterminantTimeAnalysis.png)
 
-
-
-
-
-
-
-
-
 ---will do more analysis later.
 
+## HowTo
+
+You can run tests from "NewMain" class. Either Test.testDeterminantSpeed(int size, int runsPerTest); or 
+testMultiplicationSpeed(int size, int runs). Matrix value types have to changed manually for now.

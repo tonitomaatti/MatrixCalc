@@ -1,6 +1,6 @@
 package matrixcalc;
 
-import matrixcalc.domain.Strassen;
+import matrixcalc.domain.Multiplication;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -43,7 +43,7 @@ public class StrassenTest {
         testMatrix[1][0] = 3;
         testMatrix[1][1] = 4;
         
-        testMatrix = Strassen.multiply(testMatrix, testMatrix);
+        testMatrix = Multiplication.multiply(testMatrix, testMatrix);
         
         int[][] correctMatrix = new int[2][2];
         correctMatrix[0][0] = 7;
@@ -58,7 +58,7 @@ public class StrassenTest {
     public void correctMultipleWithSingle(){
         int[][] testMatrix = new int[1][1];
         testMatrix[0][0] = 2;
-        testMatrix = Strassen.multiply(testMatrix, testMatrix);
+        testMatrix = Multiplication.multiply(testMatrix, testMatrix);
         
         int[][] correctMatrix = new int[1][1];
         correctMatrix[0][0] = 4;

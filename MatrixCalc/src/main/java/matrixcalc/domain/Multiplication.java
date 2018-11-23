@@ -5,7 +5,7 @@ package matrixcalc.domain;
  * This is an algorithm to multiply two matrices
  * Strassen algorithm
  */
-public class Strassen {
+public class Multiplication {
     
     /**
      * First expand matrices to power of two so division always works, then call for recursive strassen
@@ -14,8 +14,36 @@ public class Strassen {
      * @return Returns multiplied matrix
      */
     public static int[][] multiply(int[][] A, int[][] B){
-         //expand to the power of two
+        
+        //Get to the power of two
         int size = A.length;
+        int powerOfTwo = getNextPowerOfTwo(size);
+        
+        //create expanded
+        int[][] Aexpand = expandToPowerOfTwo(A, powerOfTwo, size);
+        int[][] Bexpand = expandToPowerOfTwo(B, powerOfTwo, size);
+        
+        
+        //Get the mulitiplied matrix
+        int[][] C = strassenRecursive(Aexpand, Bexpand);
+        
+        //trim C back
+        int[][] Ctrimmed = trimFromPowerOfTwo(C, size);
+        
+        return Ctrimmed;
+    }
+    
+    private static int[][] trimFromPowerOfTwo(int[][] X, int size){
+        int[][] Xtrimmed = new int[size][size];
+        for(int i = 0; i < size; i++){
+            for(int j = 0; j < size; j++){
+                Xtrimmed[i][j] = X[i][j]; 
+            }
+        }
+        return Xtrimmed;
+    }
+    
+    private static int getNextPowerOfTwo(int size){
         int powerOfTwo = 1;
         
         while(true){
@@ -25,28 +53,21 @@ public class Strassen {
                 break;
             }
         }
+        return powerOfTwo;
+    }
+    
+    
+    private static int[][] expandToPowerOfTwo(int[][] X, int powerOfTwo, int size){
         
-        //create expanded
-        int[][] Aexpand = new int[powerOfTwo][powerOfTwo];
-        int[][] Bexpand = new int[powerOfTwo][powerOfTwo];
+        int[][] Xexpand = new int[powerOfTwo][powerOfTwo];
         
         for(int i = 0; i < size; i++){
             for(int j = 0; j < size; j++){
-                Aexpand[i][j] = A[i][j];
-                Bexpand[i][j] = B[i][j];
+                Xexpand[i][j] = X[i][j];
+                
             }
         }
-        
-        int[][] C = strassenRecursive(Aexpand, Bexpand);
-        
-        //trim C back
-        int[][] Ctrimmed = new int[size][size];
-        for(int i = 0; i < size; i++){
-            for(int j = 0; j < size; j++){
-                Ctrimmed[i][j] = C[i][j]; 
-            }
-        }
-        return Ctrimmed;
+        return Xexpand;
     }
     
     /**
@@ -57,11 +78,10 @@ public class Strassen {
      */
     private static int[][] strassenRecursive(int[][] A, int[][] B){
         
-        int length = A.length;
+        int size = A.length;
         
         //If reduced to single element, end of recursion
-        if(length==1){
-            
+        if(size==1){
             int[][] single = new int[1][1];
             single[0][0] = A[0][0]*B[0][0];
             return single;
@@ -69,16 +89,16 @@ public class Strassen {
         
         //Divide matrices to sub-matrices
         
-        int n = length/2;
-        int[][] a11 = createSubMatrix(A, n, 0,0);
-        int[][] a12 = createSubMatrix(A, n, 0,n);
-        int[][] a21 = createSubMatrix(A, n, n,0);;
-        int[][] a22 = createSubMatrix(A, n, n,n);
+        int subSize = size/2;
+        int[][] a11 = createSubMatrix(A, subSize, 0,0);
+        int[][] a12 = createSubMatrix(A, subSize, 0,subSize);
+        int[][] a21 = createSubMatrix(A, subSize, subSize,0);;
+        int[][] a22 = createSubMatrix(A, subSize, subSize,subSize);
         
-        int[][] b11 = createSubMatrix(B, n, 0,0);
-        int[][] b12 = createSubMatrix(B, n, 0,n);
-        int[][] b21 = createSubMatrix(B, n, n,0);;
-        int[][] b22 = createSubMatrix(B, n, n,n);
+        int[][] b11 = createSubMatrix(B, subSize, 0,0);
+        int[][] b12 = createSubMatrix(B, subSize, 0,subSize);
+        int[][] b21 = createSubMatrix(B, subSize, subSize,0);;
+        int[][] b22 = createSubMatrix(B, subSize, subSize, subSize);
         
         //Create M-components:
         int[][] m1 = strassenRecursive(Addition.add(a11, a22),Addition.add(b11, b22));
@@ -96,16 +116,25 @@ public class Strassen {
         int[][] c22 = Addition.add(Substraction.substract(m1, m2), Addition.add(m3,m6));
         
         //Join new submatrices
-        int[][] c = new int[length][length];
-        for(int i = 0; i < n; i++){
-            for(int j = 0; j < n; j++){
-                c[i][j] = c11[i][j];
-                c[i][j+n] = c12[i][j];
-                c[i+n][j] = c21[i][j];
-                c[i+n][j+n] = c22[i][j];
+        int[][] c = combineSubMatrices(subSize, size, c11, c12, c21, c22);
+        
+        return c;
+    }
+    
+    private static int[][] combineSubMatrices(int subSize, int size, int[][] sub11,
+            int[][] sub12, int[][] sub21, int[][] sub22 ){
+        
+        int[][] joinedMatrix = new int[size][size];
+        
+        for(int i = 0; i < subSize; i++){
+            for(int j = 0; j < subSize; j++){
+                joinedMatrix[i][j] = sub11[i][j];
+                joinedMatrix[i][j+subSize] = sub12[i][j];
+                joinedMatrix[i+subSize][j] = sub21[i][j];
+                joinedMatrix[i+subSize][j+subSize] = sub22[i][j];
             }
         }
-        return c;
+        return joinedMatrix;
     }
     
     /**

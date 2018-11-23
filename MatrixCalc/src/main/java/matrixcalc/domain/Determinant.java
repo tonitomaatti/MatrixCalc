@@ -5,7 +5,7 @@ package matrixcalc.domain;
  * An algorithm to first decompose a matrix and then produce the determinant
  *
  */
-public class Doolittle {
+public class Determinant {
     
     /**
      * Decomposes a matrix to lower and upper matrices A = LU. Doolittle's algorithm
@@ -16,7 +16,6 @@ public class Doolittle {
         int size = A.length;
         double[][] L = new double[size][size];
         double[][] U = new double[size][size];
-        
         
         for(int k = 0; k<size; k++){
             
@@ -39,7 +38,6 @@ public class Doolittle {
                 L[i][k] = (A[i][k] - sum) / U[k][k];
             }
         }
-        
         return U;
     }
     

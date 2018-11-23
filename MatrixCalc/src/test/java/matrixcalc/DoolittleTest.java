@@ -1,6 +1,6 @@
 package matrixcalc;
 
-import matrixcalc.domain.Doolittle;
+import matrixcalc.domain.Determinant;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -42,7 +42,7 @@ public class DoolittleTest {
         testMatrix[1][0] = 3;
         testMatrix[1][1] = 4;
         
-        double determinant = Doolittle.determinant(testMatrix);
+        double determinant = Determinant.determinant(testMatrix);
         double expectedDeterminant = -2;
         
         Assert.assertEquals(determinant, expectedDeterminant, 0.001);
@@ -59,7 +59,7 @@ public class DoolittleTest {
             }
         }
         
-        double determinant = Doolittle.determinant(testMatrix);
+        double determinant = Determinant.determinant(testMatrix);
         double expectedDeterminant = 0;
         
         //with delta 0.001;
@@ -72,7 +72,7 @@ public class DoolittleTest {
         testMatrix[0][0] = 1;
         
         
-        double determinant = Doolittle.determinant(testMatrix);
+        double determinant = Determinant.determinant(testMatrix);
         double expectedDeterminant = 1;
         
         Assert.assertEquals(determinant, expectedDeterminant, 0.001);

@@ -1,5 +1,10 @@
 # Implementation
 
+File Structure:
+
+![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/FileStructureNetbeans.png)
+
+
 The program takes square matrices as input and can do one of the following: 1. Add, 2. Substract, 3. Multiply, 
 4. Find a determinant. Input will probably be handled by simple GUI and matrices will be built to double[][] type tables.
 

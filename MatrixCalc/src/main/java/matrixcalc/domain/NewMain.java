@@ -9,7 +9,7 @@ import matrixcalc.test.Test;
 
 /**
  *
- * @author <>
+ * 
  */
 public class NewMain {
 

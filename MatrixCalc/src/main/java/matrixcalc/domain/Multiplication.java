@@ -33,6 +33,12 @@ public class Multiplication {
         return Ctrimmed;
     }
     
+    /**
+     * Trims the matrix back to original size after result
+     * @param X Matrix to be trimmed
+     * @param size Original size
+     * @return Trimmed matrix
+     */
     private static double[][] trimFromPowerOfTwo(double[][] X, int size){
         double[][] Xtrimmed = new double[size][size];
         for(int i = 0; i < size; i++){
@@ -43,6 +49,11 @@ public class Multiplication {
         return Xtrimmed;
     }
     
+    /**
+     * Takes an integer and returns the closest larger power of two
+     * @param size Original size
+     * @return Next power of two
+     */
     private static int getNextPowerOfTwo(int size){
         int powerOfTwo = 1;
         
@@ -56,7 +67,13 @@ public class Multiplication {
         return powerOfTwo;
     }
     
-    
+    /**
+     * Expands a matrix to the next power of two. This makes division by 2  work every time
+     * @param X Matrix to be expanded
+     * @param powerOfTwo power of two to expand to
+     * @param size original size
+     * @return Expanded matrix
+     */
     private static double[][] expandToPowerOfTwo(double[][] X, int powerOfTwo, int size){
         
         double[][] Xexpand = new double[powerOfTwo][powerOfTwo];
@@ -121,6 +138,16 @@ public class Multiplication {
         return c;
     }
     
+    /**
+     * Combines submatrices back to original after multiplication results
+     * @param subSize size of submatrix
+     * @param size Original size
+     * @param sub11 submatrix
+     * @param sub12 submatrix
+     * @param sub21 submatrix
+     * @param sub22 submatrix
+     * @return combined matrix
+     */
     private static double[][] combineSubMatrices(int subSize, int size, double[][] sub11,
             double[][] sub12, double[][] sub21, double[][] sub22 ){
         

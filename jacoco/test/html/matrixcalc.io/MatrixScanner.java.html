@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fi"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MatrixScanner.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MatrixCalc</a> &gt; <a href="index.source.html" class="el_package">matrixcalc.io</a> &gt; <span class="el_source">MatrixScanner.java</span></div><h1>MatrixScanner.java</h1><pre class="source lang-java linenums">
+package matrixcalc.io;
+
+import java.util.Scanner;
+
+/**
+ * A temporary way to create a matrix
+ * 
+ */
+<span class="nc" id="L10">public class MatrixScanner {</span>
+    
+    /**
+     * Read size and elements from user input
+     * @return returns a matrix build from user input
+     */
+    public static int[][] buildMatrix(){
+    
+<span class="nc" id="L18">        Scanner sc = new Scanner(System.in);</span>
+        
+<span class="nc" id="L20">        System.out.println(&quot;Give Row lenght: &quot;);</span>
+        
+<span class="nc" id="L22">        int rowLength = sc.nextInt();</span>
+        
+<span class="nc" id="L24">        int row = 0;</span>
+<span class="nc" id="L25">        int column = -1;</span>
+<span class="nc" id="L26">        int count = 0;</span>
+        
+<span class="nc" id="L28">        int[][] a = new int[rowLength][rowLength]; //user selected row length determines size</span>
+        
+        //loop: Go on until false input or matrix is full, when row is full, change to next one
+        while(true){
+<span class="nc" id="L32">            System.out.println(&quot;Next entry: &quot;);</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">            if(!sc.hasNextInt()){</span>
+<span class="nc" id="L34">                break;</span>
+            }
+<span class="nc" id="L36">            int entry = sc.nextInt();</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">            if(column == rowLength-1){</span>
+<span class="nc" id="L38">                row++;</span>
+<span class="nc" id="L39">                column = -1;</span>
+            }
+<span class="nc" id="L41">            column++;</span>
+<span class="nc" id="L42">            System.out.println(&quot;Setting number &quot;+entry+&quot; to row &quot;+row+&quot; and column &quot;+column);</span>
+<span class="nc" id="L43">            a[row][column] = entry;</span>
+<span class="nc" id="L44">            count++;</span>
+<span class="nc bnc" id="L45" title="All 2 branches missed.">            if(count==rowLength*rowLength){</span>
+<span class="nc" id="L46">                break;</span>
+            }
+<span class="nc" id="L48">        }</span>
+        
+<span class="nc" id="L50">        return a;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

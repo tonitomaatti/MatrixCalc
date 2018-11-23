@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fi"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Multiplication.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MatrixCalc</a> &gt; <a href="index.source.html" class="el_package">matrixcalc.domain</a> &gt; <span class="el_source">Multiplication.java</span></div><h1>Multiplication.java</h1><pre class="source lang-java linenums">
+package matrixcalc.domain;
+
+/**
+ * This is an algorithm to multiply two matrices
+ * Strassen algorithm
+ */
+<span class="nc" id="L8">public class Multiplication {</span>
+    
+    /**
+     * First expand matrices to power of two so division always works, then call for recursive strassen
+     * @param A First matrix
+     * @param B Second matrix
+     * @return Returns multiplied matrix
+     */
+    public static double[][] multiply(double[][] A, double[][] B){
+        
+        //Get to the power of two
+<span class="fc" id="L19">        int size = A.length;</span>
+<span class="fc" id="L20">        int powerOfTwo = getNextPowerOfTwo(size);</span>
+        
+        //create expanded
+<span class="fc" id="L23">        double[][] Aexpand = expandToPowerOfTwo(A, powerOfTwo, size);</span>
+<span class="fc" id="L24">        double[][] Bexpand = expandToPowerOfTwo(B, powerOfTwo, size);</span>
+        
+        
+        //Get the mulitiplied matrix
+<span class="fc" id="L28">        double[][] C = strassenRecursive(Aexpand, Bexpand);</span>
+        
+        //trim C back
+<span class="fc" id="L31">        double[][] Ctrimmed = trimFromPowerOfTwo(C, size);</span>
+        
+<span class="fc" id="L33">        return Ctrimmed;</span>
+    }
+    
+    /**
+     * Trims the matrix back to original size after result
+     * @param X Matrix to be trimmed
+     * @param size Original size
+     * @return Trimmed matrix
+     */
+    private static double[][] trimFromPowerOfTwo(double[][] X, int size){
+<span class="fc" id="L43">        double[][] Xtrimmed = new double[size][size];</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        for(int i = 0; i &lt; size; i++){</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">            for(int j = 0; j &lt; size; j++){</span>
+<span class="fc" id="L46">                Xtrimmed[i][j] = X[i][j]; </span>
+            }
+        }
+<span class="fc" id="L49">        return Xtrimmed;</span>
+    }
+    
+    /**
+     * Takes an integer and returns the closest larger power of two
+     * @param size Original size
+     * @return Next power of two
+     */
+    private static int getNextPowerOfTwo(int size){
+<span class="fc" id="L58">        int powerOfTwo = 1;</span>
+        
+        while(true){
+<span class="fc bfc" id="L61" title="All 2 branches covered.">            if(powerOfTwo&lt;size){</span>
+<span class="fc" id="L62">                powerOfTwo *= 2;</span>
+            }else{
+                break;
+            }
+        }
+<span class="fc" id="L67">        return powerOfTwo;</span>
+    }
+    
+    /**
+     * Expands a matrix to the next power of two. This makes division by 2  work every time
+     * @param X Matrix to be expanded
+     * @param powerOfTwo power of two to expand to
+     * @param size original size
+     * @return Expanded matrix
+     */
+    private static double[][] expandToPowerOfTwo(double[][] X, int powerOfTwo, int size){
+        
+<span class="fc" id="L79">        double[][] Xexpand = new double[powerOfTwo][powerOfTwo];</span>
+        
+<span class="fc bfc" id="L81" title="All 2 branches covered.">        for(int i = 0; i &lt; size; i++){</span>
+<span class="fc bfc" id="L82" title="All 2 branches covered.">            for(int j = 0; j &lt; size; j++){</span>
+<span class="fc" id="L83">                Xexpand[i][j] = X[i][j];</span>
+                
+            }
+        }
+<span class="fc" id="L87">        return Xexpand;</span>
+    }
+    
+    /**
+     * This is a recursive matrix multipliying algorithm
+     * @param A First expanded matrix
+     * @param B Second expanded matrix
+     * @return Returns expanded multiplied matrix
+     */
+    private static double[][] strassenRecursive(double[][] A, double[][] B){
+        
+<span class="fc" id="L98">        int size = A.length;</span>
+        
+        //If reduced to single element, end of recursion
+<span class="fc bfc" id="L101" title="All 2 branches covered.">        if(size==1){</span>
+<span class="fc" id="L102">            double[][] single = new double[1][1];</span>
+<span class="fc" id="L103">            single[0][0] = A[0][0]*B[0][0];</span>
+<span class="fc" id="L104">            return single;</span>
+        }
+        
+        //Divide matrices to sub-matrices
+        
+<span class="fc" id="L109">        int subSize = size/2;</span>
+<span class="fc" id="L110">        double[][] a11 = createSubMatrix(A, subSize, 0,0);</span>
+<span class="fc" id="L111">        double[][] a12 = createSubMatrix(A, subSize, 0,subSize);</span>
+<span class="fc" id="L112">        double[][] a21 = createSubMatrix(A, subSize, subSize,0);;</span>
+<span class="fc" id="L113">        double[][] a22 = createSubMatrix(A, subSize, subSize,subSize);</span>
+        
+<span class="fc" id="L115">        double[][] b11 = createSubMatrix(B, subSize, 0,0);</span>
+<span class="fc" id="L116">        double[][] b12 = createSubMatrix(B, subSize, 0,subSize);</span>
+<span class="fc" id="L117">        double[][] b21 = createSubMatrix(B, subSize, subSize,0);;</span>
+<span class="fc" id="L118">        double[][] b22 = createSubMatrix(B, subSize, subSize, subSize);</span>
+        
+        //Create M-components:
+<span class="fc" id="L121">        double[][] m1 = strassenRecursive(Addition.add(a11, a22),Addition.add(b11, b22));</span>
+<span class="fc" id="L122">        double[][] m2 = strassenRecursive(Addition.add(a21, a22), b11);</span>
+<span class="fc" id="L123">        double[][] m3 = strassenRecursive(a11, Substraction.substract(b12, b22));</span>
+<span class="fc" id="L124">        double[][] m4 = strassenRecursive(a22 , Substraction.substract(b21, b11));</span>
+<span class="fc" id="L125">        double[][] m5 = strassenRecursive(Addition.add(a11, a12),b22);</span>
+<span class="fc" id="L126">        double[][] m6 = strassenRecursive(Substraction.substract(a21, a11),Addition.add(b11, b12));</span>
+<span class="fc" id="L127">        double[][] m7 = strassenRecursive(Substraction.substract(a12, a22),Addition.add(b21, b22));</span>
+        
+        //new submatrices:
+<span class="fc" id="L130">        double[][] c11 = Substraction.substract(Addition.add(Addition.add(m1, m4), m7),m5);</span>
+<span class="fc" id="L131">        double[][] c12 = Addition.add(m3, m5);</span>
+<span class="fc" id="L132">        double[][] c21 = Addition.add(m2, m4);</span>
+<span class="fc" id="L133">        double[][] c22 = Addition.add(Substraction.substract(m1, m2), Addition.add(m3,m6));</span>
+        
+        //Join new submatrices
+<span class="fc" id="L136">        double[][] c = combineSubMatrices(subSize, size, c11, c12, c21, c22);</span>
+        
+<span class="fc" id="L138">        return c;</span>
+    }
+    
+    /**
+     * Combines submatrices back to original after multiplication results
+     * @param subSize size of submatrix
+     * @param size Original size
+     * @param sub11 submatrix
+     * @param sub12 submatrix
+     * @param sub21 submatrix
+     * @param sub22 submatrix
+     * @return combined matrix
+     */
+    private static double[][] combineSubMatrices(int subSize, int size, double[][] sub11,
+            double[][] sub12, double[][] sub21, double[][] sub22 ){
+        
+<span class="fc" id="L154">        double[][] joinedMatrix = new double[size][size];</span>
+        
+<span class="fc bfc" id="L156" title="All 2 branches covered.">        for(int i = 0; i &lt; subSize; i++){</span>
+<span class="fc bfc" id="L157" title="All 2 branches covered.">            for(int j = 0; j &lt; subSize; j++){</span>
+<span class="fc" id="L158">                joinedMatrix[i][j] = sub11[i][j];</span>
+<span class="fc" id="L159">                joinedMatrix[i][j+subSize] = sub12[i][j];</span>
+<span class="fc" id="L160">                joinedMatrix[i+subSize][j] = sub21[i][j];</span>
+<span class="fc" id="L161">                joinedMatrix[i+subSize][j+subSize] = sub22[i][j];</span>
+            }
+        }
+<span class="fc" id="L164">        return joinedMatrix;</span>
+    }
+    
+    /**
+     * Creates the submatrices when dividing the original to 4 parts
+     * @param oldM The large original matrix to be divided
+     * @param size The size of the new submatrix
+     * @param startingRow Where to start rows, depends on which submatrix is being created
+     * @param startingColumn Where to start columns, depends on which submatrix is being created
+     * @return returns the created submatrix
+     */
+    private static double[][] createSubMatrix(double[][] oldM, int size, int startingRow, int startingColumn){
+        
+<span class="fc" id="L177">        double[][] subM = new double[size][size]; </span>
+        
+<span class="fc bfc" id="L179" title="All 2 branches covered.">        for(int i = 0; i&lt;size; i++){</span>
+<span class="fc bfc" id="L180" title="All 2 branches covered.">            for(int j = 0; j &lt; size;  j++){</span>
+<span class="fc" id="L181">                subM[i][j] = oldM[i+startingRow][j+startingColumn];</span>
+            }
+        }    
+<span class="fc" id="L184">        return subM;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

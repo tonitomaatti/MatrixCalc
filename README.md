@@ -17,4 +17,4 @@ Very cool, such algorithms, wow!
 
 ## HowTo
 
-- Some examples in NewMain.java
+- Some examples of functionality in NewMain.java

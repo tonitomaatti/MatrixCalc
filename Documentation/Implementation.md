@@ -2,7 +2,7 @@
 
 File Structure:
 
-![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/FileStructureNetbeans.png)
+![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Resources/FileStructureNetbeans.png)
 
 
 The program takes square matrices as input and can do one of the following: 1. Add, 2. Substract, 3. Multiply, 
@@ -21,7 +21,7 @@ The program only needs double[][] type data structures, so there's no own implem
 Strassen algorithm is a recursive divide and conquer type algorithm. According to wikipedia, time complexity should be n^(2,81). 
 According to initial tests, my implementation seems to follow to be close to that.
 
-![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/MultiplicationTimeAnalysis.png)
+![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Resources/MultiplicationTimeAnalysis.png)
 
 
 ## Determinant
@@ -29,7 +29,7 @@ According to initial tests, my implementation seems to follow to be close to tha
 The matrix is decomposed by LU decomposition. The determinant is then the product of the diagonal of the upper part. Time complexity
 should be n^3. Not sure yet how closely the implementation follows that.
 
-![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/DeterminantTimeAnalysis.png)
+![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Resources/DeterminantTimeAnalysis.png)
 
 ## UI and I/O
 

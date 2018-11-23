@@ -18,9 +18,10 @@ by hand. Program fails for anything but square matrices, but probably GUI will e
 No code analysis done yet for time and space complexities
 
 
-## NEXT UP:
+## TODO:
 
 - Implement GUI and I/O files to use that.
 - Do code analysis for time and space complexities.
 - Option to GUI to run tests.
 - Visualisation for test and comparison to theoretical complexity.
+- Link javadoc and jacoco to automatically generated places from front page

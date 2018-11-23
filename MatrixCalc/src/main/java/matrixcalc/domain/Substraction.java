@@ -1,5 +1,5 @@
 
-package matrixcalc;
+package matrixcalc.domain;
 
 /**
  *

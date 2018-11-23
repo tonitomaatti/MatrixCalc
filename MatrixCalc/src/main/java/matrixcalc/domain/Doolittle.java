@@ -1,5 +1,5 @@
 
-package matrixcalc;
+package matrixcalc.domain;
 
 /**
  * An algorithm to first decompose a matrix and then produce the determinant

@@ -1,5 +1,5 @@
 
-package matrixcalc;
+package matrixcalc.io;
 
 import java.util.Scanner;
 
@@ -13,7 +13,7 @@ public class MatrixScanner {
      * Read size and elements from user input
      * @return returns a matrix build from user input
      */
-    public int[][] buildMatrix(){
+    public static int[][] buildMatrix(){
     
         Scanner sc = new Scanner(System.in);
         
@@ -49,31 +49,4 @@ public class MatrixScanner {
         
         return a;
     }
-    
-    /**
-     * print the matrix in matrixy -looking way
-     * @param printable Matrix to be printed
-     */
-    public static void print(int[][] printable){
-        for(int i = 0; i < printable.length; i++){
-            for(int j = 0; j < printable.length; j++){
-                System.out.print(printable[i][j]+" ");
-            }
-            System.out.println("");
-        }
-    }
-    
-    /**
-     * Prints a double[][] type matrix
-     * @param printable The matrix to be printed
-     */
-    public static void printDouble(double[][] printable){
-        for(int i = 0; i < printable.length; i++){
-            for(int j = 0; j < printable.length; j++){
-                System.out.print(printable[i][j]+" ");
-            }
-            System.out.println("");
-        }
-    }
-    
 }

@@ -1,5 +1,6 @@
 package matrixcalc;
 
+import matrixcalc.domain.Doolittle;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.AfterClass;

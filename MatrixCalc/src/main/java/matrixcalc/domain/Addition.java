@@ -1,5 +1,5 @@
 
-package matrixcalc;
+package matrixcalc.domain;
 
 /**
  * Adds two matrices together by simply iterating through every element

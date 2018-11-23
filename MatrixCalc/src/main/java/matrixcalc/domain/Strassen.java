@@ -1,5 +1,5 @@
 
-package matrixcalc;
+package matrixcalc.domain;
 
 /**
  * This is an algorithm to multiply two matrices
@@ -105,7 +105,6 @@ public class Strassen {
                 c[i+n][j+n] = c22[i][j];
             }
         }
-        
         return c;
     }
     

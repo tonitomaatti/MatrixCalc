@@ -19,16 +19,15 @@ public class NewMain {
     public static void main(String[] args) {
         
         //testataan kakkosen potensseilla:
-        int pow2 = 1;
+        //int pow2 = 1;
+        
         int runsPerTest = 10;
+        int size = 0;
         
         for(int i = 0; i<11; i++){
-            Test.testMultiplicationSpeed(pow2, runsPerTest);
-            pow2 *= 2;
+            Test.testDeterminantSpeed(size, runsPerTest);
+            size +=100;
         }
-        
-        
-        
         
     }
     

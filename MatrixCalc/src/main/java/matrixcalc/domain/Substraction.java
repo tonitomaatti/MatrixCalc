@@ -12,9 +12,9 @@ public class Substraction {
      * @param matrixB desc
      * @return the result
      */
-    public static int[][] substract(int[][] matrixA,int[][] matrixB ){
+    public static double[][] substract(double[][] matrixA, double[][] matrixB ){
         
-        int[][] matrixC = new int[matrixA.length][matrixA.length];
+        double[][] matrixC = new double[matrixA.length][matrixA.length];
         
         for(int i = 0; i<matrixA.length; i++){
             for(int j = 0; j<matrixA.length; j++){

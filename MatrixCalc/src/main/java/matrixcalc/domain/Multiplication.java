@@ -13,28 +13,28 @@ public class Multiplication {
      * @param B Second matrix
      * @return Returns multiplied matrix
      */
-    public static int[][] multiply(int[][] A, int[][] B){
+    public static double[][] multiply(double[][] A, double[][] B){
         
         //Get to the power of two
         int size = A.length;
         int powerOfTwo = getNextPowerOfTwo(size);
         
         //create expanded
-        int[][] Aexpand = expandToPowerOfTwo(A, powerOfTwo, size);
-        int[][] Bexpand = expandToPowerOfTwo(B, powerOfTwo, size);
+        double[][] Aexpand = expandToPowerOfTwo(A, powerOfTwo, size);
+        double[][] Bexpand = expandToPowerOfTwo(B, powerOfTwo, size);
         
         
         //Get the mulitiplied matrix
-        int[][] C = strassenRecursive(Aexpand, Bexpand);
+        double[][] C = strassenRecursive(Aexpand, Bexpand);
         
         //trim C back
-        int[][] Ctrimmed = trimFromPowerOfTwo(C, size);
+        double[][] Ctrimmed = trimFromPowerOfTwo(C, size);
         
         return Ctrimmed;
     }
     
-    private static int[][] trimFromPowerOfTwo(int[][] X, int size){
-        int[][] Xtrimmed = new int[size][size];
+    private static double[][] trimFromPowerOfTwo(double[][] X, int size){
+        double[][] Xtrimmed = new double[size][size];
         for(int i = 0; i < size; i++){
             for(int j = 0; j < size; j++){
                 Xtrimmed[i][j] = X[i][j]; 
@@ -57,9 +57,9 @@ public class Multiplication {
     }
     
     
-    private static int[][] expandToPowerOfTwo(int[][] X, int powerOfTwo, int size){
+    private static double[][] expandToPowerOfTwo(double[][] X, int powerOfTwo, int size){
         
-        int[][] Xexpand = new int[powerOfTwo][powerOfTwo];
+        double[][] Xexpand = new double[powerOfTwo][powerOfTwo];
         
         for(int i = 0; i < size; i++){
             for(int j = 0; j < size; j++){
@@ -76,13 +76,13 @@ public class Multiplication {
      * @param B Second expanded matrix
      * @return Returns expanded multiplied matrix
      */
-    private static int[][] strassenRecursive(int[][] A, int[][] B){
+    private static double[][] strassenRecursive(double[][] A, double[][] B){
         
         int size = A.length;
         
         //If reduced to single element, end of recursion
         if(size==1){
-            int[][] single = new int[1][1];
+            double[][] single = new double[1][1];
             single[0][0] = A[0][0]*B[0][0];
             return single;
         }
@@ -90,41 +90,41 @@ public class Multiplication {
         //Divide matrices to sub-matrices
         
         int subSize = size/2;
-        int[][] a11 = createSubMatrix(A, subSize, 0,0);
-        int[][] a12 = createSubMatrix(A, subSize, 0,subSize);
-        int[][] a21 = createSubMatrix(A, subSize, subSize,0);;
-        int[][] a22 = createSubMatrix(A, subSize, subSize,subSize);
+        double[][] a11 = createSubMatrix(A, subSize, 0,0);
+        double[][] a12 = createSubMatrix(A, subSize, 0,subSize);
+        double[][] a21 = createSubMatrix(A, subSize, subSize,0);;
+        double[][] a22 = createSubMatrix(A, subSize, subSize,subSize);
         
-        int[][] b11 = createSubMatrix(B, subSize, 0,0);
-        int[][] b12 = createSubMatrix(B, subSize, 0,subSize);
-        int[][] b21 = createSubMatrix(B, subSize, subSize,0);;
-        int[][] b22 = createSubMatrix(B, subSize, subSize, subSize);
+        double[][] b11 = createSubMatrix(B, subSize, 0,0);
+        double[][] b12 = createSubMatrix(B, subSize, 0,subSize);
+        double[][] b21 = createSubMatrix(B, subSize, subSize,0);;
+        double[][] b22 = createSubMatrix(B, subSize, subSize, subSize);
         
         //Create M-components:
-        int[][] m1 = strassenRecursive(Addition.add(a11, a22),Addition.add(b11, b22));
-        int[][] m2 = strassenRecursive(Addition.add(a21, a22), b11);
-        int[][] m3 = strassenRecursive(a11, Substraction.substract(b12, b22));
-        int[][] m4 = strassenRecursive(a22 , Substraction.substract(b21, b11));
-        int[][] m5 = strassenRecursive(Addition.add(a11, a12),b22);
-        int[][] m6 = strassenRecursive(Substraction.substract(a21, a11),Addition.add(b11, b12));
-        int[][] m7 = strassenRecursive(Substraction.substract(a12, a22),Addition.add(b21, b22));
+        double[][] m1 = strassenRecursive(Addition.add(a11, a22),Addition.add(b11, b22));
+        double[][] m2 = strassenRecursive(Addition.add(a21, a22), b11);
+        double[][] m3 = strassenRecursive(a11, Substraction.substract(b12, b22));
+        double[][] m4 = strassenRecursive(a22 , Substraction.substract(b21, b11));
+        double[][] m5 = strassenRecursive(Addition.add(a11, a12),b22);
+        double[][] m6 = strassenRecursive(Substraction.substract(a21, a11),Addition.add(b11, b12));
+        double[][] m7 = strassenRecursive(Substraction.substract(a12, a22),Addition.add(b21, b22));
         
         //new submatrices:
-        int[][] c11 = Substraction.substract(Addition.add(Addition.add(m1, m4), m7),m5);
-        int[][] c12 = Addition.add(m3, m5);
-        int[][] c21 = Addition.add(m2, m4);
-        int[][] c22 = Addition.add(Substraction.substract(m1, m2), Addition.add(m3,m6));
+        double[][] c11 = Substraction.substract(Addition.add(Addition.add(m1, m4), m7),m5);
+        double[][] c12 = Addition.add(m3, m5);
+        double[][] c21 = Addition.add(m2, m4);
+        double[][] c22 = Addition.add(Substraction.substract(m1, m2), Addition.add(m3,m6));
         
         //Join new submatrices
-        int[][] c = combineSubMatrices(subSize, size, c11, c12, c21, c22);
+        double[][] c = combineSubMatrices(subSize, size, c11, c12, c21, c22);
         
         return c;
     }
     
-    private static int[][] combineSubMatrices(int subSize, int size, int[][] sub11,
-            int[][] sub12, int[][] sub21, int[][] sub22 ){
+    private static double[][] combineSubMatrices(int subSize, int size, double[][] sub11,
+            double[][] sub12, double[][] sub21, double[][] sub22 ){
         
-        int[][] joinedMatrix = new int[size][size];
+        double[][] joinedMatrix = new double[size][size];
         
         for(int i = 0; i < subSize; i++){
             for(int j = 0; j < subSize; j++){
@@ -145,9 +145,9 @@ public class Multiplication {
      * @param startingColumn Where to start columns, depends on which submatrix is being created
      * @return returns the created submatrix
      */
-    private static int[][] createSubMatrix(int[][] oldM, int size, int startingRow, int startingColumn){
+    private static double[][] createSubMatrix(double[][] oldM, int size, int startingRow, int startingColumn){
         
-        int[][] subM = new int[size][size]; 
+        double[][] subM = new double[size][size]; 
         
         for(int i = 0; i<size; i++){
             for(int j = 0; j < size;  j++){

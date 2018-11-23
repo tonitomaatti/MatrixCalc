@@ -12,9 +12,9 @@ import org.junit.Test;
  *
  * @author faarao
  */
-public class DoolittleTest {
+public class DeterminantTest {
     
-    public DoolittleTest() {
+    public DeterminantTest() {
     }
     
     @BeforeClass
@@ -36,7 +36,7 @@ public class DoolittleTest {
     
     @Test
     public void correctDeterminantWith2x2(){
-        int[][] testMatrix = new int[2][2];
+        double[][] testMatrix = new double[2][2];
         testMatrix[0][0] = 1;
         testMatrix[0][1] = 2;
         testMatrix[1][0] = 3;
@@ -50,7 +50,7 @@ public class DoolittleTest {
     
     @Test
     public void correctDeterminantWith3x3(){
-        int[][] testMatrix = new int[3][3];
+        double[][] testMatrix = new double[3][3];
         int entry = 0;
         for(int i = 0; i<3; i++){
             for(int j = 0; j<3; j++){
@@ -68,7 +68,7 @@ public class DoolittleTest {
     
     @Test
     public void correctDeterminantWithSingle(){
-        int[][] testMatrix = new int[1][1];
+        double[][] testMatrix = new double[1][1];
         testMatrix[0][0] = 1;
         
         

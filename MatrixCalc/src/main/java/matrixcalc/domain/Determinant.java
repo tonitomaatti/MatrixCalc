@@ -12,7 +12,7 @@ public class Determinant {
      * @param A The matrix to be composed
      * @return Returns the upper matrix which is needed for determinant
      */
-    private static double[][] decomposeU(int[][] A){
+    private static double[][] decomposeU(double[][] A){
         int size = A.length;
         double[][] L = new double[size][size];
         double[][] U = new double[size][size];
@@ -46,7 +46,7 @@ public class Determinant {
      * @param A Matrix for the determinant
      * @return returns the determinant
      */
-    public static double determinant(int[][] A){
+    public static double determinant(double[][] A){
         double[][] upper = decomposeU(A);
         double det = 1;
         for(int i = 0; i<A.length; i++){

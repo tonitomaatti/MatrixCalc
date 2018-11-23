@@ -33,7 +33,7 @@ public class AdditionTest {
 
     @Test
     public void AdditionWorksCorrectly(){
-        int[][] testMatrix = new int[2][2];
+        double[][] testMatrix = new double[2][2];
         testMatrix[0][0] = 1;
         testMatrix[0][1] = 2;
         testMatrix[1][0] = 3;
@@ -41,7 +41,7 @@ public class AdditionTest {
         
         testMatrix = Addition.add(testMatrix, testMatrix);
         
-        int[][] correctMatrix = new int[2][2];
+        double[][] correctMatrix = new double[2][2];
         correctMatrix[0][0] = 1+1;
         correctMatrix[0][1] = 2+2;
         correctMatrix[1][0] = 3+3;

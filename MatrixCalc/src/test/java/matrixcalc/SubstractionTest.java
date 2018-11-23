@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author faarao
+ *
  */
 public class SubstractionTest {
     
@@ -43,7 +43,7 @@ public class SubstractionTest {
     
     @Test
     public void SubstractionWorksCorrectly(){
-        int[][] testMatrix = new int[2][2];
+        double[][] testMatrix = new double[2][2];
         testMatrix[0][0] = 1;
         testMatrix[0][1] = 2;
         testMatrix[1][0] = 3;
@@ -52,7 +52,7 @@ public class SubstractionTest {
         
         testMatrix = Substraction.substract(testMatrix, testMatrix);
         
-        int[][] correctMatrix = new int[2][2];
+        double[][] correctMatrix = new double[2][2];
         correctMatrix[0][0] = 1-1;
         correctMatrix[0][1] = 2-2;
         correctMatrix[1][0] = 3-3;

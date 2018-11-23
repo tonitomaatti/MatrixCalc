@@ -13,9 +13,9 @@ import org.junit.Test;
  *
  * @author faarao
  */
-public class StrassenTest {
+public class MultiplicationTest {
     
-    public StrassenTest() {
+    public MultiplicationTest() {
     }
     
     @BeforeClass
@@ -37,7 +37,7 @@ public class StrassenTest {
     
     @Test
     public void correctMultipleWith2x2(){
-        int[][] testMatrix = new int[2][2];
+        double[][] testMatrix = new double[2][2];
         testMatrix[0][0] = 1;
         testMatrix[0][1] = 2;
         testMatrix[1][0] = 3;
@@ -45,7 +45,7 @@ public class StrassenTest {
         
         testMatrix = Multiplication.multiply(testMatrix, testMatrix);
         
-        int[][] correctMatrix = new int[2][2];
+        double[][] correctMatrix = new double[2][2];
         correctMatrix[0][0] = 7;
         correctMatrix[0][1] = 10;
         correctMatrix[1][0] = 15;
@@ -56,11 +56,11 @@ public class StrassenTest {
     
     @Test
     public void correctMultipleWithSingle(){
-        int[][] testMatrix = new int[1][1];
+        double[][] testMatrix = new double[1][1];
         testMatrix[0][0] = 2;
         testMatrix = Multiplication.multiply(testMatrix, testMatrix);
         
-        int[][] correctMatrix = new int[1][1];
+        double[][] correctMatrix = new double[1][1];
         correctMatrix[0][0] = 4;
         
         org.junit.Assert.assertArrayEquals(testMatrix, correctMatrix);

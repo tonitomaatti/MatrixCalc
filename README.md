@@ -17,4 +17,6 @@ Very cool, such algorithms, wow!
 
 ## HowTo
 
-- Some examples of functionality in NewMain.java
+- matrixcacltodo.txt at the root has some examples to run from main.
+- For now main.java just starts GUI
+- Parse A in GUI should work. Write a square matrix to textfield 1 ("1,2,3,4" for example) and the program should construct and print a matrix

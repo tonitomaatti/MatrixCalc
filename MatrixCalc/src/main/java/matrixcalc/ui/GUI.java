@@ -6,7 +6,7 @@ import matrixcalc.io.MatrixScanner;
 
 /**
  *
- * 
+ * Basically done with help of https://netbeans.org/kb/docs/java/quickstart-gui.html
  */
 public class GUI extends javax.swing.JFrame {
 

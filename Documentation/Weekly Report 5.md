@@ -1,6 +1,6 @@
 # Week 5
 
-Time spent 6 hours.
+Time spent: 6 hours.
 
 Didn't do much this week because of time constraints and because the algorithms and data structures are basically done.
 

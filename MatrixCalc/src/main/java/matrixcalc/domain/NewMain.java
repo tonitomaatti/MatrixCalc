@@ -29,7 +29,6 @@ public class NewMain {
         }
         System.out.println("");
         
-        
         //Run Multiplication Tests
         int runs = 10;
         int powerOfTwo = 1;
@@ -41,7 +40,6 @@ public class NewMain {
         }
         System.out.println("");
         
-        
         //Add Matrices And Print
         double[][] A = GenerateMatrix.generate(4, -100, 100);
         double[][] B = GenerateMatrix.generate(4, -100, 100);
@@ -50,7 +48,6 @@ public class NewMain {
         System.out.println("");
         double[][] Added = Addition.add(A, B);
         MatrixPrinter.print(Added);
-        
         
         //Multiply Matrices And Print
         double[][] multA = GenerateMatrix.generate(4, -100, 100);
@@ -61,7 +58,6 @@ public class NewMain {
         double[][] Multiplied = Multiplication.multiply(A, B);
         MatrixPrinter.print(Multiplied);
         
-        
         //Get Determinant And Print
         double[][] X = GenerateMatrix.generate(4, -100, 100);
         System.out.println("");
@@ -69,7 +65,5 @@ public class NewMain {
         System.out.println("");
         double determinant = Determinant.determinant(X);
         System.out.println(determinant);
-    
     }
-    
 }

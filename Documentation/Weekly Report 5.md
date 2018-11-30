@@ -9,4 +9,4 @@ Still need to finish GUI and reports.
 # This week I:
 
 - Did the peer review
-- Started working on GUI
+- Started working on GUI with netbeans GUI builder: https://netbeans.org/kb/docs/java/quickstart-gui.html

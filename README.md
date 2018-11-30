@@ -14,6 +14,7 @@ Very cool, such algorithms, wow!
 - [Week 2](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Weekly%20Report%202.md)
 - [Week 3](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Weekly%20Report%203.md)
 - [Week 4](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Weekly%20Report%204.md)
+- [Week 5](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Weekly%20Report%205.md)
 
 ## HowTo
 

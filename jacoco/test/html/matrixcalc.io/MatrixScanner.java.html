@@ -49,5 +49,25 @@ import java.util.Scanner;
         
 <span class="nc" id="L50">        return a;</span>
     }
+    
+    public static double[][] buildMatrixFromGUI(String input){
+<span class="nc" id="L54">        String[] numbers = input.split(&quot;,&quot;);</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">        for(String number : numbers){</span>
+<span class="nc" id="L56">            System.out.println(number);</span>
+        }
+<span class="nc" id="L58">        int size = (int) Math.sqrt(numbers.length);</span>
+<span class="nc" id="L59">        double[][] a = new double[size][size];</span>
+<span class="nc" id="L60">        int i = 0;</span>
+<span class="nc" id="L61">        int j = 0;</span>
+<span class="nc bnc" id="L62" title="All 2 branches missed.">        for(String number : numbers){</span>
+<span class="nc" id="L63">            a[j][i] = Double.valueOf(number);</span>
+<span class="nc" id="L64">            i++;</span>
+<span class="nc bnc" id="L65" title="All 2 branches missed.">            if(i==size){</span>
+<span class="nc" id="L66">                i=0;</span>
+<span class="nc" id="L67">                j++;</span>
+            }
+        }
+<span class="nc" id="L70">        return a;</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

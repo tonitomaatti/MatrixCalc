@@ -15,9 +15,11 @@ Very cool, such algorithms, wow!
 - [Week 3](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Weekly%20Report%203.md)
 - [Week 4](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Weekly%20Report%204.md)
 - [Week 5](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Weekly%20Report%205.md)
+- [Week 6](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Weekly%20Report%206.md)
 
 ## HowTo
 
-- matrixcacltodo.txt at the root has some examples to run from main.
-- For now main.java just starts GUI
-- Parse A in GUI should work. Write a square matrix to textfield 1 ("1,2,3,4" for example) and the program should construct and print a matrix
+- Run gradle from terminal or run main (or GUI). 
+- A GUI interface should work, hopefully pretty self-explanatory.
+- matrixcacltodo.txt at the root has some examples to run from main if GUI fails
+

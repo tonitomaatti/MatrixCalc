@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'jacoco'
+apply plugin: 'application'
 
 
 sourceCompatibility = '1.8'
@@ -32,12 +33,19 @@ dependencies {
             html.enabled = true
         }
     }
+    
+    // https://mvnrepository.com/artifact/jfree/jfreechart
+    compile group: 'jfree', name: 'jfreechart', version: '1.0.12'
 
     check.dependsOn jacocoTestReport
 }
 
+mainClassName = 'matrixcalc.domain.Main'
+
+
+
 jar {
     manifest {
-        attributes 'Main-Class': 'matrixcalc.Main'
+        attributes 'Main-Class': 'matrixcalc.domain.Main'
     }
 }

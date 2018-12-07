@@ -14,7 +14,7 @@ public class Test {
      * @param size size of matrix
      * @param runs amount of runs to be done. Average is printed
      */
-    public static void testMultiplicationSpeed(int size, int runs){
+    public static double testMultiplicationSpeed(int size, int runs){
         
         long sum = 0;
         
@@ -29,8 +29,9 @@ public class Test {
         
         long average = sum / runs;
         
-        System.out.println("Running time: " + average + "ms. "+"with size of "+size);
-    
+        
+        
+        return (double) average;
     }
     
     /**
@@ -60,7 +61,7 @@ public class Test {
      * @param size size of matrix
      * @param runs Amount of runs. Average is printed
      */
-    public static void testDeterminantSpeed(int size, int runs){
+    public static double testDeterminantSpeed(int size, int runs){
         
         long sum = 0;
         
@@ -75,7 +76,8 @@ public class Test {
         long average = sum / runs;
         
         System.out.println("Running time: " + average + "ms. "+"with size of "+size);
-    
+        
+        return (double) average;
     }
     
     

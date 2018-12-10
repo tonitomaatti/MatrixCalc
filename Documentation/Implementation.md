@@ -33,6 +33,8 @@ MatrixScanner takes String from GUI user input. It then transforms this into a d
 
 ## UI
 
+GUI is built with netbeans GUI building tool with instructions from https://netbeans.org/kb/docs/java/quickstart-gui.html
+
 All functionality is accessible from GUI. You can input your own matrices and do calculations (buttons Add, Substract, Multiply and Determinant). You can also try to run you your own time tests with test buttons. Select maximum matrix size from dropdown menu. GUI has some notes and a text field to some console outputs.
 
 

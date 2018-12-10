@@ -36,7 +36,7 @@ Multiplication seems to follow the theoretical curve pretty closely
 
 A slightly more erratic behavior. 
 
-![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Resources/DeterminantTimeAnalysis.png)
+![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Resources/DeterminantTimeAnalysis1.png)
 
 ---will do more analysis later.
 

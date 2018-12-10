@@ -23,7 +23,7 @@ For a matrix size n x n
   - For square matrices: det(AB) = det(A) det(B)  (Johdatus lineaarialgebraan, Osa I, Lause 11.13.)
   - The determinant of a triangular matrix is the product of its diagonal entries (Lause 11.11.3.)
 
-- Final data structures to be determined when I'm more familiar with the algorithms. First implementation likely uses int[][] type tables. At least in the case of addition and substraction, the algorithms simply iterate through successive entries. 
+- As a data structure, the program uses double[][] table for matrices. No other complex structures are needed for the algorithms. 
 
 ### Sources:
 

@@ -13,77 +13,49 @@ import matrixcalc.domain.Multiplication;
      * Tests multiplication speeds by average
      * @param size size of matrix
      * @param runs amount of runs to be done. Average is printed
+     * @return Average of 10 tests
      */
     public static double testMultiplicationSpeed(int size, int runs){
         
-<span class="nc" id="L19">        long sum = 0;</span>
+<span class="nc" id="L20">        long sum = 0;</span>
         
-<span class="nc bnc" id="L21" title="All 2 branches missed.">        for(int i=0; i&lt;runs; i++){</span>
-<span class="nc" id="L22">            double[][] toTest1 = GenerateMatrix.generate(size, -1000, 1000);</span>
-<span class="nc" id="L23">            double[][] toTest2 = GenerateMatrix.generate(size, -1000, 1000);</span>
-<span class="nc" id="L24">            long startTime = System.currentTimeMillis();</span>
-<span class="nc" id="L25">            Multiplication.multiply(toTest1, toTest2);</span>
-<span class="nc" id="L26">            long endTime = System.currentTimeMillis();</span>
-<span class="nc" id="L27">            sum += (endTime - startTime);</span>
+<span class="nc bnc" id="L22" title="All 2 branches missed.">        for(int i=0; i&lt;runs; i++){</span>
+<span class="nc" id="L23">            double[][] toTest1 = GenerateMatrix.generate(size, -1000, 1000);</span>
+<span class="nc" id="L24">            double[][] toTest2 = GenerateMatrix.generate(size, -1000, 1000);</span>
+<span class="nc" id="L25">            long startTime = System.currentTimeMillis();</span>
+<span class="nc" id="L26">            Multiplication.multiply(toTest1, toTest2);</span>
+<span class="nc" id="L27">            long endTime = System.currentTimeMillis();</span>
+<span class="nc" id="L28">            sum += (endTime - startTime);</span>
         }
         
-<span class="nc" id="L30">        long average = sum / runs;</span>
+<span class="nc" id="L31">        long average = sum / runs;</span>
         
         
         
-<span class="nc" id="L34">        return (double) average;</span>
+<span class="nc" id="L35">        return (double) average;</span>
     }
-    
-    /**
-     * Nanotime test for multiplication
-     * @param size Size of matrix
-     * @param runs Amount of runs
-     */
-    public static void testMultiplicationNano(int size, int runs){
-<span class="nc" id="L43">        long sum = 0;</span>
-        
-<span class="nc bnc" id="L45" title="All 2 branches missed.">        for(int i=0; i&lt;runs; i++){</span>
-<span class="nc" id="L46">            double[][] toTest1 = GenerateMatrix.generate(size, -1000, 1000);</span>
-<span class="nc" id="L47">            double[][] toTest2 = GenerateMatrix.generate(size, -1000, 1000);</span>
-<span class="nc" id="L48">            long startTime = System.nanoTime();</span>
-<span class="nc" id="L49">            Multiplication.multiply(toTest1, toTest2);</span>
-<span class="nc" id="L50">            long endTime = System.nanoTime();</span>
-<span class="nc" id="L51">            sum += (endTime - startTime);</span>
-        }
-        
-<span class="nc" id="L54">        long average = sum / runs;</span>
-        
-<span class="nc" id="L56">        System.out.println(&quot;Running time: &quot; + average + &quot;nanoseconds &quot;+&quot;with size of &quot;+size);</span>
-<span class="nc" id="L57">    }</span>
     
     /**
      * Tests running time for determinant algorithm
      * @param size size of matrix
      * @param runs Amount of runs. Average is printed
+     * @return Average of 10 tests
      */
     public static double testDeterminantSpeed(int size, int runs){
         
-<span class="nc" id="L66">        long sum = 0;</span>
+<span class="nc" id="L46">        long sum = 0;</span>
         
-<span class="nc bnc" id="L68" title="All 2 branches missed.">        for(int i=0; i&lt;runs; i++){</span>
-<span class="nc" id="L69">            double[][] toTest1 = GenerateMatrix.generate(size, -1000, 1000);</span>
-<span class="nc" id="L70">            long startTime = System.currentTimeMillis();</span>
-<span class="nc" id="L71">            Determinant.determinant(toTest1);</span>
-<span class="nc" id="L72">            long endTime = System.currentTimeMillis();</span>
-<span class="nc" id="L73">            sum += (endTime - startTime);</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">        for(int i=0; i&lt;runs; i++){</span>
+<span class="nc" id="L49">            double[][] toTest1 = GenerateMatrix.generate(size, -1000, 1000);</span>
+<span class="nc" id="L50">            long startTime = System.currentTimeMillis();</span>
+<span class="nc" id="L51">            Determinant.determinant(toTest1);</span>
+<span class="nc" id="L52">            long endTime = System.currentTimeMillis();</span>
+<span class="nc" id="L53">            sum += (endTime - startTime);</span>
         }
         
-<span class="nc" id="L76">        long average = sum / runs;</span>
+<span class="nc" id="L56">        long average = sum / runs;</span>
         
-<span class="nc" id="L78">        System.out.println(&quot;Running time: &quot; + average + &quot;ms. &quot;+&quot;with size of &quot;+size);</span>
-        
-<span class="nc" id="L80">        return (double) average;</span>
+<span class="nc" id="L58">        return (double) average;</span>
     }
-    
-    
-    
-    
-    
-    
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

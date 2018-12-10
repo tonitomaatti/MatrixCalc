@@ -1,11 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fi"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MatrixCalc</a> &gt; <a href="index.source.html" class="el_package">matrixcalc.ui</a> &gt; <span class="el_source">GUI.java</span></div><h1>GUI.java</h1><pre class="source lang-java linenums">
-package matrixcalc.ui;
-
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fi"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MatrixCalc</a> &gt; <a href="index.source.html" class="el_package">matrixcalc.ui</a> &gt; <span class="el_source">GUI.java</span></div><h1>GUI.java</h1><pre class="source lang-java linenums">package matrixcalc.ui;
 
 import matrixcalc.domain.Addition;
 import matrixcalc.domain.Multiplication;
 import matrixcalc.domain.Substraction;
-import matrixcalc.io.MatrixPrinter;
 import matrixcalc.io.MatrixScanner;
 import matrixcalc.test.Test;
 import org.jfree.chart.ChartFactory;
@@ -19,17 +16,16 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 /**
- *
- * Basically done with help of https://netbeans.org/kb/docs/java/quickstart-gui.html
+ * Basically done with help of https://netbeans.org/kb/docs/java/quickstart-gui.html and Netbeans GUI builder.
  */
 public class GUI extends javax.swing.JFrame {
 
     /**
      * Creates new form GUI
      */
-<span class="nc" id="L30">    public GUI() {</span>
-<span class="nc" id="L31">        initComponents();</span>
-<span class="nc" id="L32">    }</span>
+<span class="nc" id="L26">    public GUI() {</span>
+<span class="nc" id="L27">        initComponents();</span>
+<span class="nc" id="L28">    }</span>
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -40,350 +36,375 @@ public class GUI extends javax.swing.JFrame {
     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<span class="nc" id="L43">        jPanel1 = new javax.swing.JPanel();</span>
-<span class="nc" id="L44">        jLabel1 = new javax.swing.JLabel();</span>
-<span class="nc" id="L45">        jLabel2 = new javax.swing.JLabel();</span>
-<span class="nc" id="L46">        MatrixA = new javax.swing.JTextField();</span>
-<span class="nc" id="L47">        MatrixB = new javax.swing.JTextField();</span>
-<span class="nc" id="L48">        Add = new javax.swing.JButton();</span>
-<span class="nc" id="L49">        Substract = new javax.swing.JButton();</span>
-<span class="nc" id="L50">        Multiply = new javax.swing.JButton();</span>
-<span class="nc" id="L51">        Determinant = new javax.swing.JButton();</span>
-<span class="nc" id="L52">        jLabel3 = new javax.swing.JLabel();</span>
-<span class="nc" id="L53">        multiplyTest = new javax.swing.JButton();</span>
-<span class="nc" id="L54">        javax.swing.JButton determinantTest = new javax.swing.JButton();</span>
-<span class="nc" id="L55">        jLabel4 = new javax.swing.JLabel();</span>
-<span class="nc" id="L56">        multiplyTestSize = new java.awt.Choice();</span>
-<span class="nc" id="L57">        determinantOut = new javax.swing.JTextField();</span>
-<span class="nc" id="L58">        determinantTestSize = new java.awt.Choice();</span>
-<span class="nc" id="L59">        jScrollPane1 = new javax.swing.JScrollPane();</span>
-<span class="nc" id="L60">        howTo = new javax.swing.JTextArea();</span>
-<span class="nc" id="L61">        jScrollPane2 = new javax.swing.JScrollPane();</span>
-<span class="nc" id="L62">        consoleOut = new javax.swing.JTextArea();</span>
+<span class="nc" id="L39">        jPanel1 = new javax.swing.JPanel();</span>
+<span class="nc" id="L40">        jLabel1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L41">        jLabel2 = new javax.swing.JLabel();</span>
+<span class="nc" id="L42">        MatrixA = new javax.swing.JTextField();</span>
+<span class="nc" id="L43">        MatrixB = new javax.swing.JTextField();</span>
+<span class="nc" id="L44">        Add = new javax.swing.JButton();</span>
+<span class="nc" id="L45">        Substract = new javax.swing.JButton();</span>
+<span class="nc" id="L46">        Multiply = new javax.swing.JButton();</span>
+<span class="nc" id="L47">        Determinant = new javax.swing.JButton();</span>
+<span class="nc" id="L48">        jLabel3 = new javax.swing.JLabel();</span>
+<span class="nc" id="L49">        multiplyTest = new javax.swing.JButton();</span>
+<span class="nc" id="L50">        javax.swing.JButton determinantTest = new javax.swing.JButton();</span>
+<span class="nc" id="L51">        jLabel4 = new javax.swing.JLabel();</span>
+<span class="nc" id="L52">        multiplyTestSize = new java.awt.Choice();</span>
+<span class="nc" id="L53">        determinantOut = new javax.swing.JTextField();</span>
+<span class="nc" id="L54">        determinantTestSize = new java.awt.Choice();</span>
+<span class="nc" id="L55">        jScrollPane1 = new javax.swing.JScrollPane();</span>
+<span class="nc" id="L56">        howTo = new javax.swing.JTextArea();</span>
+<span class="nc" id="L57">        jScrollPane2 = new javax.swing.JScrollPane();</span>
+<span class="nc" id="L58">        consoleOut = new javax.swing.JTextArea();</span>
 
-<span class="nc" id="L64">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L60">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
 
-<span class="nc" id="L66">        jLabel1.setText(&quot;Matrix A&quot;);</span>
+<span class="nc" id="L62">        jLabel1.setText(&quot;Matrix A&quot;);</span>
 
-<span class="nc" id="L68">        jLabel2.setText(&quot;Matrix B&quot;);</span>
+<span class="nc" id="L64">        jLabel2.setText(&quot;Matrix B&quot;);</span>
 
-<span class="nc" id="L70">        MatrixA.setText(&quot;1,2,3,4&quot;);</span>
+<span class="nc" id="L66">        MatrixA.setText(&quot;1,2,3,4&quot;);</span>
 
-<span class="nc" id="L72">        MatrixB.setText(&quot;3.4, 5.8, 117.3, 10&quot;);</span>
+<span class="nc" id="L68">        MatrixB.setText(&quot;3.4, 5.8, 117.3, 10&quot;);</span>
 
-<span class="nc" id="L74">        Add.setText(&quot;Add&quot;);</span>
-<span class="nc" id="L75">        Add.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L70">        Add.setText(&quot;Add&quot;);</span>
+<span class="nc" id="L71">        Add.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L77">                AddActionPerformed(evt);</span>
-<span class="nc" id="L78">            }</span>
+<span class="nc" id="L73">                AddActionPerformed(evt);</span>
+<span class="nc" id="L74">            }</span>
         });
 
-<span class="nc" id="L81">        Substract.setText(&quot;Multiply&quot;);</span>
-<span class="nc" id="L82">        Substract.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L77">        Substract.setText(&quot;Multiply&quot;);</span>
+<span class="nc" id="L78">        Substract.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L84">                MultiplyActionPerformed(evt);</span>
-<span class="nc" id="L85">            }</span>
+<span class="nc" id="L80">                MultiplyActionPerformed(evt);</span>
+<span class="nc" id="L81">            }</span>
         });
 
-<span class="nc" id="L88">        Multiply.setText(&quot;Substract&quot;);</span>
-<span class="nc" id="L89">        Multiply.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L84">        Multiply.setText(&quot;Substract&quot;);</span>
+<span class="nc" id="L85">        Multiply.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L91">                SubstractActionPerformed(evt);</span>
-<span class="nc" id="L92">            }</span>
+<span class="nc" id="L87">                SubstractActionPerformed(evt);</span>
+<span class="nc" id="L88">            }</span>
         });
 
-<span class="nc" id="L95">        Determinant.setText(&quot;Determinant&quot;);</span>
-<span class="nc" id="L96">        Determinant.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L91">        Determinant.setText(&quot;Determinant&quot;);</span>
+<span class="nc" id="L92">        Determinant.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L98">                DeterminantActionPerformed(evt);</span>
-<span class="nc" id="L99">            }</span>
+<span class="nc" id="L94">                DeterminantActionPerformed(evt);</span>
+<span class="nc" id="L95">            }</span>
         });
 
-<span class="nc" id="L102">        jLabel3.setText(&quot;Tests&quot;);</span>
+<span class="nc" id="L98">        jLabel3.setText(&quot;Tests&quot;);</span>
 
-<span class="nc" id="L104">        multiplyTest.setText(&quot;MultiplyTest&quot;);</span>
-<span class="nc" id="L105">        multiplyTest.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L100">        multiplyTest.setText(&quot;MultiplyTest&quot;);</span>
+<span class="nc" id="L101">        multiplyTest.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L107">                MultiplyTestActionPerformed(evt);</span>
-<span class="nc" id="L108">            }</span>
+<span class="nc" id="L103">                MultiplyTestActionPerformed(evt);</span>
+<span class="nc" id="L104">            }</span>
         });
 
-<span class="nc" id="L111">        determinantTest.setText(&quot;DeterminantTest&quot;);</span>
-<span class="nc" id="L112">        determinantTest.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L107">        determinantTest.setText(&quot;DeterminantTest&quot;);</span>
+<span class="nc" id="L108">        determinantTest.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L114">                DeterminantTestActionPerformed(evt);</span>
-<span class="nc" id="L115">            }</span>
+<span class="nc" id="L110">                DeterminantTestActionPerformed(evt);</span>
+<span class="nc" id="L111">            }</span>
         });
 
-<span class="nc" id="L118">        jLabel4.setText(&quot;Max Size&quot;);</span>
+<span class="nc" id="L114">        jLabel4.setText(&quot;Max Size&quot;);</span>
 
-<span class="nc" id="L120">        howTo.setColumns(20);</span>
-<span class="nc" id="L121">        howTo.setRows(5);</span>
-<span class="nc" id="L122">        howTo.setText(&quot;1. Square matrices (double) to Matrix A and Matrix B. Row by row, delimit with \&quot;,\&quot;\n2. Determinant uses \&quot;Matrix A\&quot; field\n3. Test buttons run tests with max size from menu.\n4. Can't close GUI during test runs so beware of long tests.&quot;);</span>
-<span class="nc" id="L123">        jScrollPane1.setViewportView(howTo);</span>
+<span class="nc" id="L116">        howTo.setColumns(20);</span>
+<span class="nc" id="L117">        howTo.setRows(5);</span>
+<span class="nc" id="L118">        howTo.setText(&quot;1. Square matrices (double) to Matrix A and Matrix B. Row by row, delimit with \&quot;,\&quot;\n2. Determinant uses \&quot;Matrix A\&quot; field\n3. Test buttons run tests with max size from menu.\n4. Can't close GUI during test runs so beware of long tests.&quot;);</span>
+<span class="nc" id="L119">        jScrollPane1.setViewportView(howTo);</span>
 
-<span class="nc" id="L125">        consoleOut.setColumns(20);</span>
-<span class="nc" id="L126">        consoleOut.setRows(5);</span>
-<span class="nc" id="L127">        jScrollPane2.setViewportView(consoleOut);</span>
+<span class="nc" id="L121">        consoleOut.setColumns(20);</span>
+<span class="nc" id="L122">        consoleOut.setRows(5);</span>
+<span class="nc" id="L123">        jScrollPane2.setViewportView(consoleOut);</span>
 
-<span class="nc" id="L129">        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);</span>
-<span class="nc" id="L130">        jPanel1.setLayout(jPanel1Layout);</span>
-<span class="nc" id="L131">        jPanel1Layout.setHorizontalGroup(</span>
-<span class="nc" id="L132">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L133">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="nc" id="L134">                .addContainerGap()</span>
-<span class="nc" id="L135">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L136">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="nc" id="L137">                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 702, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L138">                        .addGap(0, 0, Short.MAX_VALUE))</span>
-<span class="nc" id="L139">                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()</span>
-<span class="nc" id="L140">                        .addGap(0, 0, Short.MAX_VALUE)</span>
-<span class="nc" id="L141">                        .addComponent(jLabel3)</span>
-<span class="nc" id="L142">                        .addGap(48, 48, 48)</span>
-<span class="nc" id="L143">                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L144">                        .addGap(160, 160, 160))</span>
-<span class="nc" id="L145">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="nc" id="L146">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L147">                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
-<span class="nc" id="L148">                                .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="nc" id="L149">                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L150">                                        .addComponent(jLabel2)</span>
-<span class="nc" id="L151">                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="nc" id="L152">                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
-<span class="nc" id="L153">                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
-<span class="nc" id="L154">                                        .addComponent(MatrixB, javax.swing.GroupLayout.DEFAULT_SIZE, 549, Short.MAX_VALUE)</span>
-<span class="nc" id="L155">                                        .addComponent(MatrixA)))</span>
-<span class="nc" id="L156">                                .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="nc" id="L157">                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L125">        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);</span>
+<span class="nc" id="L126">        jPanel1.setLayout(jPanel1Layout);</span>
+<span class="nc" id="L127">        jPanel1Layout.setHorizontalGroup(</span>
+<span class="nc" id="L128">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L129">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L130">                .addContainerGap()</span>
+<span class="nc" id="L131">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L132">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L133">                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 702, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L134">                        .addGap(0, 0, Short.MAX_VALUE))</span>
+<span class="nc" id="L135">                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L136">                        .addGap(0, 0, Short.MAX_VALUE)</span>
+<span class="nc" id="L137">                        .addComponent(jLabel3)</span>
+<span class="nc" id="L138">                        .addGap(48, 48, 48)</span>
+<span class="nc" id="L139">                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L140">                        .addGap(160, 160, 160))</span>
+<span class="nc" id="L141">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L142">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L143">                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="nc" id="L144">                                .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L145">                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L146">                                        .addComponent(jLabel2)</span>
+<span class="nc" id="L147">                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L148">                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L149">                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="nc" id="L150">                                        .addComponent(MatrixB, javax.swing.GroupLayout.DEFAULT_SIZE, 549, Short.MAX_VALUE)</span>
+<span class="nc" id="L151">                                        .addComponent(MatrixA)))</span>
+<span class="nc" id="L152">                                .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L153">                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L154">                                        .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L155">                                            .addComponent(Determinant)</span>
+<span class="nc" id="L156">                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L157">                                            .addComponent(determinantOut, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
 <span class="nc" id="L158">                                        .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="nc" id="L159">                                            .addComponent(Determinant)</span>
-<span class="nc" id="L160">                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="nc" id="L161">                                            .addComponent(determinantOut, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="nc" id="L162">                                        .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="nc" id="L163">                                            .addComponent(Add)</span>
-<span class="nc" id="L164">                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
-<span class="nc" id="L165">                                            .addComponent(Substract)</span>
-<span class="nc" id="L166">                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="nc" id="L167">                                            .addComponent(Multiply)))</span>
-<span class="nc" id="L168">                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)</span>
+<span class="nc" id="L159">                                            .addComponent(Add)</span>
+<span class="nc" id="L160">                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L161">                                            .addComponent(Substract)</span>
+<span class="nc" id="L162">                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L163">                                            .addComponent(Multiply)))</span>
+<span class="nc" id="L164">                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)</span>
+<span class="nc" id="L165">                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L166">                                        .addComponent(determinantTest, javax.swing.GroupLayout.Alignment.TRAILING)</span>
+<span class="nc" id="L167">                                        .addComponent(multiplyTest, javax.swing.GroupLayout.Alignment.TRAILING))</span>
+<span class="nc" id="L168">                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
 <span class="nc" id="L169">                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L170">                                        .addComponent(determinantTest, javax.swing.GroupLayout.Alignment.TRAILING)</span>
-<span class="nc" id="L171">                                        .addComponent(multiplyTest, javax.swing.GroupLayout.Alignment.TRAILING))</span>
-<span class="nc" id="L172">                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="nc" id="L173">                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L174">                                        .addComponent(determinantTestSize, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L175">                                        .addComponent(multiplyTestSize, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="nc" id="L176">                                    .addGap(51, 51, 51)))</span>
-<span class="nc" id="L177">                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 702, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="nc" id="L178">                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))</span>
+<span class="nc" id="L170">                                        .addComponent(determinantTestSize, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L171">                                        .addComponent(multiplyTestSize, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L172">                                    .addGap(51, 51, 51)))</span>
+<span class="nc" id="L173">                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 702, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L174">                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))</span>
         );
-<span class="nc" id="L180">        jPanel1Layout.setVerticalGroup(</span>
-<span class="nc" id="L181">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L182">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="nc" id="L183">                .addContainerGap()</span>
+<span class="nc" id="L176">        jPanel1Layout.setVerticalGroup(</span>
+<span class="nc" id="L177">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L178">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L179">                .addContainerGap()</span>
+<span class="nc" id="L180">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L181">                    .addComponent(jLabel1)</span>
+<span class="nc" id="L182">                    .addComponent(MatrixA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L183">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
 <span class="nc" id="L184">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="nc" id="L185">                    .addComponent(jLabel1)</span>
-<span class="nc" id="L186">                    .addComponent(MatrixA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="nc" id="L187">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="nc" id="L188">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="nc" id="L189">                    .addComponent(jLabel2)</span>
-<span class="nc" id="L190">                    .addComponent(MatrixB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="nc" id="L191">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
-<span class="nc" id="L192">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="nc" id="L193">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
-<span class="nc" id="L194">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="nc" id="L195">                            .addComponent(jLabel4)</span>
-<span class="nc" id="L196">                            .addComponent(jLabel3))</span>
-<span class="nc" id="L197">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)</span>
-<span class="nc" id="L198">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L199">                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="nc" id="L200">                                .addComponent(Add)</span>
-<span class="nc" id="L201">                                .addComponent(Substract)</span>
-<span class="nc" id="L202">                                .addComponent(Multiply))</span>
-<span class="nc" id="L203">                            .addComponent(multiplyTestSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="nc" id="L204">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="nc" id="L205">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L206">                            .addComponent(Determinant)</span>
-<span class="nc" id="L207">                            .addComponent(determinantTestSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))</span>
-<span class="nc" id="L208">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="nc" id="L209">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
-<span class="nc" id="L210">                        .addComponent(multiplyTest)</span>
-<span class="nc" id="L211">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
-<span class="nc" id="L212">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="nc" id="L213">                            .addComponent(determinantOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L214">                            .addComponent(determinantTest))</span>
-<span class="nc" id="L215">                        .addGap(1, 1, 1)))</span>
-<span class="nc" id="L216">                .addGap(18, 18, 18)</span>
-<span class="nc" id="L217">                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L218">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
-<span class="nc" id="L219">                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L220">                .addContainerGap())</span>
+<span class="nc" id="L185">                    .addComponent(jLabel2)</span>
+<span class="nc" id="L186">                    .addComponent(MatrixB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L187">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
+<span class="nc" id="L188">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L189">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L190">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L191">                            .addComponent(jLabel4)</span>
+<span class="nc" id="L192">                            .addComponent(jLabel3))</span>
+<span class="nc" id="L193">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)</span>
+<span class="nc" id="L194">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L195">                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L196">                                .addComponent(Add)</span>
+<span class="nc" id="L197">                                .addComponent(Substract)</span>
+<span class="nc" id="L198">                                .addComponent(Multiply))</span>
+<span class="nc" id="L199">                            .addComponent(multiplyTestSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L200">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L201">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L202">                            .addComponent(Determinant)</span>
+<span class="nc" id="L203">                            .addComponent(determinantTestSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))</span>
+<span class="nc" id="L204">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L205">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L206">                        .addComponent(multiplyTest)</span>
+<span class="nc" id="L207">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L208">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L209">                            .addComponent(determinantOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L210">                            .addComponent(determinantTest))</span>
+<span class="nc" id="L211">                        .addGap(1, 1, 1)))</span>
+<span class="nc" id="L212">                .addGap(18, 18, 18)</span>
+<span class="nc" id="L213">                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L214">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L215">                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L216">                .addContainerGap())</span>
         );
 
-<span class="nc" id="L223">        multiplyTestSize.add(&quot;2^1&quot;);</span>
-<span class="nc" id="L224">        multiplyTestSize.add(&quot;2^2&quot;);</span>
-<span class="nc" id="L225">        multiplyTestSize.add(&quot;2^3&quot;);</span>
-<span class="nc" id="L226">        multiplyTestSize.add(&quot;2^4&quot;);</span>
-<span class="nc" id="L227">        multiplyTestSize.add(&quot;2^5&quot;);</span>
-<span class="nc" id="L228">        multiplyTestSize.add(&quot;2^6&quot;);</span>
-<span class="nc" id="L229">        multiplyTestSize.add(&quot;2^7&quot;);</span>
-<span class="nc" id="L230">        multiplyTestSize.add(&quot;2^8&quot;);</span>
-<span class="nc" id="L231">        multiplyTestSize.add(&quot;2^9&quot;);</span>
-<span class="nc" id="L232">        multiplyTestSize.add(&quot;2^10&quot;);</span>
-<span class="nc" id="L233">        multiplyTestSize.getAccessibleContext().setAccessibleName(&quot;&quot;);</span>
-<span class="nc" id="L234">        multiplyTestSize.getAccessibleContext().setAccessibleDescription(&quot;&quot;);</span>
-<span class="nc" id="L235">        determinantTestSize.getAccessibleContext().setAccessibleName(&quot;&quot;);</span>
-<span class="nc" id="L236">        determinantTestSize.add(&quot;100&quot;);</span>
-<span class="nc" id="L237">        determinantTestSize.add(&quot;200&quot;);</span>
-<span class="nc" id="L238">        determinantTestSize.add(&quot;300&quot;);</span>
-<span class="nc" id="L239">        determinantTestSize.add(&quot;400&quot;);</span>
-<span class="nc" id="L240">        determinantTestSize.add(&quot;500&quot;);</span>
-<span class="nc" id="L241">        determinantTestSize.add(&quot;600&quot;);</span>
-<span class="nc" id="L242">        determinantTestSize.add(&quot;700&quot;);</span>
-<span class="nc" id="L243">        determinantTestSize.add(&quot;800&quot;);</span>
-<span class="nc" id="L244">        determinantTestSize.add(&quot;900&quot;);</span>
-<span class="nc" id="L245">        determinantTestSize.add(&quot;1000&quot;);</span>
-<span class="nc" id="L246">        determinantTestSize.add(&quot;1100&quot;);</span>
-<span class="nc" id="L247">        determinantTestSize.add(&quot;1200&quot;);</span>
-<span class="nc" id="L248">        determinantTestSize.add(&quot;1300&quot;);</span>
+<span class="nc" id="L219">        multiplyTestSize.add(&quot;2^1&quot;);</span>
+<span class="nc" id="L220">        multiplyTestSize.add(&quot;2^2&quot;);</span>
+<span class="nc" id="L221">        multiplyTestSize.add(&quot;2^3&quot;);</span>
+<span class="nc" id="L222">        multiplyTestSize.add(&quot;2^4&quot;);</span>
+<span class="nc" id="L223">        multiplyTestSize.add(&quot;2^5&quot;);</span>
+<span class="nc" id="L224">        multiplyTestSize.add(&quot;2^6&quot;);</span>
+<span class="nc" id="L225">        multiplyTestSize.add(&quot;2^7&quot;);</span>
+<span class="nc" id="L226">        multiplyTestSize.add(&quot;2^8&quot;);</span>
+<span class="nc" id="L227">        multiplyTestSize.add(&quot;2^9&quot;);</span>
+<span class="nc" id="L228">        multiplyTestSize.add(&quot;2^10&quot;);</span>
+<span class="nc" id="L229">        multiplyTestSize.getAccessibleContext().setAccessibleName(&quot;&quot;);</span>
+<span class="nc" id="L230">        multiplyTestSize.getAccessibleContext().setAccessibleDescription(&quot;&quot;);</span>
+<span class="nc" id="L231">        determinantTestSize.getAccessibleContext().setAccessibleName(&quot;&quot;);</span>
+<span class="nc" id="L232">        determinantTestSize.add(&quot;100&quot;);</span>
+<span class="nc" id="L233">        determinantTestSize.add(&quot;200&quot;);</span>
+<span class="nc" id="L234">        determinantTestSize.add(&quot;300&quot;);</span>
+<span class="nc" id="L235">        determinantTestSize.add(&quot;400&quot;);</span>
+<span class="nc" id="L236">        determinantTestSize.add(&quot;500&quot;);</span>
+<span class="nc" id="L237">        determinantTestSize.add(&quot;600&quot;);</span>
+<span class="nc" id="L238">        determinantTestSize.add(&quot;700&quot;);</span>
+<span class="nc" id="L239">        determinantTestSize.add(&quot;800&quot;);</span>
+<span class="nc" id="L240">        determinantTestSize.add(&quot;900&quot;);</span>
+<span class="nc" id="L241">        determinantTestSize.add(&quot;1000&quot;);</span>
+<span class="nc" id="L242">        determinantTestSize.add(&quot;1100&quot;);</span>
+<span class="nc" id="L243">        determinantTestSize.add(&quot;1200&quot;);</span>
+<span class="nc" id="L244">        determinantTestSize.add(&quot;1300&quot;);</span>
 
-<span class="nc" id="L250">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
-<span class="nc" id="L251">        getContentPane().setLayout(layout);</span>
-<span class="nc" id="L252">        layout.setHorizontalGroup(</span>
-<span class="nc" id="L253">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L254">            .addGroup(layout.createSequentialGroup()</span>
-<span class="nc" id="L255">                .addContainerGap()</span>
-<span class="nc" id="L256">                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L257">                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))</span>
+<span class="nc" id="L246">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="nc" id="L247">        getContentPane().setLayout(layout);</span>
+<span class="nc" id="L248">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L249">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L250">            .addGroup(layout.createSequentialGroup()</span>
+<span class="nc" id="L251">                .addContainerGap()</span>
+<span class="nc" id="L252">                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L253">                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))</span>
         );
-<span class="nc" id="L259">        layout.setVerticalGroup(</span>
-<span class="nc" id="L260">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L261">            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L255">        layout.setVerticalGroup(</span>
+<span class="nc" id="L256">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L257">            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
         );
 
-<span class="nc" id="L264">        pack();</span>
-<span class="nc" id="L265">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
-
+<span class="nc" id="L260">        pack();</span>
+<span class="nc" id="L261">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+    
+    /**
+     * Does an addition from user input
+     */
     private void AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddActionPerformed
-<span class="nc" id="L268">        consoleOut.setText(consoleOut.getText()+&quot;ADDITION:\n&quot;);</span>
-<span class="nc" id="L269">        double[][] a = MatrixScanner.buildMatrixFromGUI(MatrixA.getText());</span>
-<span class="nc" id="L270">        double[][] b = MatrixScanner.buildMatrixFromGUI(MatrixB.getText());</span>
-<span class="nc" id="L271">        double[][] added = Addition.add(a, b);</span>
-<span class="nc" id="L272">        produceTable(added);</span>
-<span class="nc" id="L273">    }//GEN-LAST:event_AddActionPerformed</span>
-
+<span class="nc" id="L267">        consoleOut.setText(consoleOut.getText()+&quot;ADDITION:\n&quot;);</span>
+<span class="nc" id="L268">        double[][] a = MatrixScanner.buildMatrixFromGUI(MatrixA.getText());</span>
+<span class="nc" id="L269">        double[][] b = MatrixScanner.buildMatrixFromGUI(MatrixB.getText());</span>
+<span class="nc" id="L270">        double[][] added = Addition.add(a, b);</span>
+<span class="nc" id="L271">        produceTable(added);</span>
+<span class="nc" id="L272">    }//GEN-LAST:event_AddActionPerformed</span>
+    
+    /**
+     * Does a substraction from user input
+     */
     private void SubstractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubstractActionPerformed
-<span class="nc" id="L276">        consoleOut.setText(consoleOut.getText()+&quot;SUBSTRACTION:\n&quot;);</span>
-<span class="nc" id="L277">        double[][] a = MatrixScanner.buildMatrixFromGUI(MatrixA.getText());</span>
-<span class="nc" id="L278">        double[][] b = MatrixScanner.buildMatrixFromGUI(MatrixB.getText());</span>
-<span class="nc" id="L279">        double[][] substracted = Substraction.substract(a, b);</span>
-<span class="nc" id="L280">        produceTable(substracted);</span>
-<span class="nc" id="L281">    }//GEN-LAST:event_SubstractActionPerformed</span>
-
+<span class="nc" id="L278">        consoleOut.setText(consoleOut.getText()+&quot;SUBSTRACTION:\n&quot;);</span>
+<span class="nc" id="L279">        double[][] a = MatrixScanner.buildMatrixFromGUI(MatrixA.getText());</span>
+<span class="nc" id="L280">        double[][] b = MatrixScanner.buildMatrixFromGUI(MatrixB.getText());</span>
+<span class="nc" id="L281">        double[][] substracted = Substraction.substract(a, b);</span>
+<span class="nc" id="L282">        produceTable(substracted);</span>
+<span class="nc" id="L283">    }//GEN-LAST:event_SubstractActionPerformed</span>
+    
+    /**
+     * Calculates a determinant from user input
+     */
     private void DeterminantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeterminantActionPerformed
-<span class="nc" id="L284">        consoleOut.setText(consoleOut.getText()+&quot;Determinant:\n&quot;);</span>
-<span class="nc" id="L285">        double[][] a = MatrixScanner.buildMatrixFromGUI(MatrixA.getText());</span>
-<span class="nc" id="L286">        double determinant = matrixcalc.domain.Determinant.determinant(a);</span>
-<span class="nc" id="L287">        determinantOut.setText(Double.toString(determinant));</span>
-<span class="nc" id="L288">        System.out.println(determinant);</span>
-<span class="nc" id="L289">    }//GEN-LAST:event_DeterminantActionPerformed</span>
-
+<span class="nc" id="L289">        consoleOut.setText(consoleOut.getText()+&quot;Determinant:\n&quot;);</span>
+<span class="nc" id="L290">        double[][] a = MatrixScanner.buildMatrixFromGUI(MatrixA.getText());</span>
+<span class="nc" id="L291">        double determinant = matrixcalc.domain.Determinant.determinant(a);</span>
+<span class="nc" id="L292">        determinantOut.setText(Double.toString(determinant));</span>
+<span class="nc" id="L293">        System.out.println(determinant);</span>
+<span class="nc" id="L294">    }//GEN-LAST:event_DeterminantActionPerformed</span>
+    
+    /**
+     * Does a multiplication from user input
+     */
     private void MultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MultiplyActionPerformed
-<span class="nc" id="L292">        consoleOut.setText(consoleOut.getText()+&quot;MULTIPLICATION:\n&quot;);</span>
-<span class="nc" id="L293">        double[][] a = MatrixScanner.buildMatrixFromGUI(MatrixA.getText());</span>
-<span class="nc" id="L294">        double[][] b = MatrixScanner.buildMatrixFromGUI(MatrixB.getText());</span>
-<span class="nc" id="L295">        double[][] multiplied = Multiplication.multiply(a, b);</span>
-<span class="nc" id="L296">        produceTable(multiplied);</span>
-<span class="nc" id="L297">    }//GEN-LAST:event_MultiplyActionPerformed</span>
-
+<span class="nc" id="L300">        consoleOut.setText(consoleOut.getText()+&quot;MULTIPLICATION:\n&quot;);</span>
+<span class="nc" id="L301">        double[][] a = MatrixScanner.buildMatrixFromGUI(MatrixA.getText());</span>
+<span class="nc" id="L302">        double[][] b = MatrixScanner.buildMatrixFromGUI(MatrixB.getText());</span>
+<span class="nc" id="L303">        double[][] multiplied = Multiplication.multiply(a, b);</span>
+<span class="nc" id="L304">        produceTable(multiplied);</span>
+<span class="nc" id="L305">    }//GEN-LAST:event_MultiplyActionPerformed</span>
+    
+    /**
+     * Runs a multiplication test
+     */
     private void MultiplyTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MultiplyTestActionPerformed
-<span class="nc" id="L300">        String testSize = multiplyTestSize.getSelectedItem();</span>
-<span class="nc" id="L301">        int maxSize = Integer.parseInt(testSize.substring(2));</span>
+<span class="nc" id="L311">        String testSize = multiplyTestSize.getSelectedItem();</span>
+<span class="nc" id="L312">        int maxSize = Integer.parseInt(testSize.substring(2));</span>
         
-<span class="nc" id="L303">        int runs = 10;</span>
-<span class="nc" id="L304">        int powerOfTwo = 1;</span>
+<span class="nc" id="L314">        int runs = 10;</span>
+<span class="nc" id="L315">        int powerOfTwo = 1;</span>
         
-<span class="nc" id="L306">        double[][] results = new double[2][maxSize+1];</span>
+<span class="nc" id="L317">        double[][] results = new double[2][maxSize+1];</span>
         
-<span class="nc" id="L308">        consoleOut.setText(consoleOut.getText()+&quot;MULTIPLICATION SPEED TESTS:\n&quot;);</span>
-<span class="nc bnc" id="L309" title="All 2 branches missed.">        for(int i = 0; i&lt;=maxSize; i++){</span>
-<span class="nc" id="L310">            results[0][i] = powerOfTwo;</span>
-<span class="nc" id="L311">            results[1][i] = Test.testMultiplicationSpeed(powerOfTwo, runs);</span>
-<span class="nc" id="L312">            consoleOut.setText(consoleOut.getText()+&quot;Running time: &quot; + results[1][i] + &quot;ms. &quot;+&quot;with size of &quot;+results[0][i]+&quot;\n&quot;);</span>
-<span class="nc" id="L313">            powerOfTwo *= 2;</span>
+<span class="nc" id="L319">        consoleOut.setText(consoleOut.getText()+&quot;MULTIPLICATION SPEED TESTS:\n&quot;);</span>
+<span class="nc bnc" id="L320" title="All 2 branches missed.">        for(int i = 0; i&lt;=maxSize; i++){</span>
+<span class="nc" id="L321">            results[0][i] = powerOfTwo;</span>
+<span class="nc" id="L322">            results[1][i] = Test.testMultiplicationSpeed(powerOfTwo, runs);</span>
+<span class="nc" id="L323">            consoleOut.setText(consoleOut.getText()+&quot;Running time: &quot; + results[1][i] + &quot;ms. &quot;+&quot;with size of &quot;+results[0][i]+&quot;\n&quot;);</span>
+<span class="nc" id="L324">            powerOfTwo *= 2;</span>
         }
-<span class="nc" id="L315">        produceChart(&quot;Multiply&quot;, results);</span>
-<span class="nc" id="L316">    }//GEN-LAST:event_MultiplyTestActionPerformed</span>
-
+<span class="nc" id="L326">        produceChart(&quot;Multiply&quot;, results);</span>
+<span class="nc" id="L327">    }//GEN-LAST:event_MultiplyTestActionPerformed</span>
+    
+    /**
+     * Runs a determinant test
+     */
     private void DeterminantTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeterminantTestActionPerformed
-<span class="nc" id="L319">        String testSize = determinantTestSize.getSelectedItem();</span>
-<span class="nc" id="L320">        int maxSize = 0;</span>
-<span class="nc bnc" id="L321" title="All 2 branches missed.">        if(testSize.length()==3){</span>
-<span class="nc" id="L322">            maxSize = Integer.parseInt(testSize.substring(0,1));</span>
+<span class="nc" id="L333">        String testSize = determinantTestSize.getSelectedItem();</span>
+<span class="nc" id="L334">        int maxSize = 0;</span>
+<span class="nc bnc" id="L335" title="All 2 branches missed.">        if(testSize.length()==3){</span>
+<span class="nc" id="L336">            maxSize = Integer.parseInt(testSize.substring(0,1));</span>
         }else{
-<span class="nc" id="L324">            maxSize = Integer.parseInt(testSize.substring(0,2));</span>
+<span class="nc" id="L338">            maxSize = Integer.parseInt(testSize.substring(0,2));</span>
         }
         
-<span class="nc" id="L327">        int runsPerTest = 10;</span>
-<span class="nc" id="L328">        int size = 0;</span>
+<span class="nc" id="L341">        int runsPerTest = 10;</span>
+<span class="nc" id="L342">        int size = 0;</span>
         
-<span class="nc" id="L330">        double[][] results = new double[2][maxSize+1];</span>
+<span class="nc" id="L344">        double[][] results = new double[2][maxSize+1];</span>
         
-<span class="nc" id="L332">        consoleOut.setText(consoleOut.getText()+&quot;DETERMINANT SPEED TESTS:\n&quot;);</span>
-<span class="nc bnc" id="L333" title="All 2 branches missed.">        for(int i = 0; i&lt;=maxSize; i++){</span>
-<span class="nc" id="L334">            results[0][i] = size;</span>
-<span class="nc" id="L335">            results[1][i] = Test.testDeterminantSpeed(size, runsPerTest);</span>
-<span class="nc" id="L336">            consoleOut.setText(consoleOut.getText()+&quot;Running time: &quot; + results[1][i] + &quot;ms. &quot;+&quot;with size of &quot;+results[0][i]+&quot;\n&quot;);</span>
-<span class="nc" id="L337">            size +=100;</span>
+<span class="nc" id="L346">        consoleOut.setText(consoleOut.getText()+&quot;DETERMINANT SPEED TESTS:\n&quot;);</span>
+<span class="nc bnc" id="L347" title="All 2 branches missed.">        for(int i = 0; i&lt;=maxSize; i++){</span>
+<span class="nc" id="L348">            results[0][i] = size;</span>
+<span class="nc" id="L349">            results[1][i] = Test.testDeterminantSpeed(size, runsPerTest);</span>
+<span class="nc" id="L350">            consoleOut.setText(consoleOut.getText()+&quot;Running time: &quot; + results[1][i] + &quot;ms. &quot;+&quot;with size of &quot;+results[0][i]+&quot;\n&quot;);</span>
+<span class="nc" id="L351">            size +=100;</span>
         }
-<span class="nc" id="L339">        produceChart(&quot;Determinant&quot;,results);</span>
-<span class="nc" id="L340">    }//GEN-LAST:event_DeterminantTestActionPerformed</span>
-
+<span class="nc" id="L353">        produceChart(&quot;Determinant&quot;,results);</span>
+<span class="nc" id="L354">    }//GEN-LAST:event_DeterminantTestActionPerformed</span>
+    
+    /**
+     * Takes data name and data to produce a chart
+     * @param name Name for data
+     * @param results Results from tests, to be plotted
+     */
     private void produceChart(String name, double[][] results){
-<span class="nc" id="L343">        DefaultXYDataset ds = new DefaultXYDataset();</span>
-<span class="nc" id="L344">        ds.addSeries(name, results);</span>
-<span class="nc" id="L345">        JFreeChart chart = ChartFactory.createXYLineChart(&quot;Test Chart&quot;,</span>
+<span class="nc" id="L362">        DefaultXYDataset ds = new DefaultXYDataset();</span>
+<span class="nc" id="L363">        ds.addSeries(name, results);</span>
+<span class="nc" id="L364">        JFreeChart chart = ChartFactory.createXYLineChart(&quot;Test Chart&quot;,</span>
                 &quot;x&quot;, &quot;y&quot;, ds, PlotOrientation.VERTICAL, true, true,
                 false);
-<span class="nc" id="L348">        ChartPanel cp = new ChartPanel(chart);</span>
+<span class="nc" id="L367">        ChartPanel cp = new ChartPanel(chart);</span>
         
-<span class="nc" id="L350">        JFrame frame = new JFrame(&quot;Charts&quot;);</span>
+<span class="nc" id="L369">        JFrame frame = new JFrame(&quot;Charts&quot;);</span>
 
-<span class="nc" id="L352">        frame.setSize(600, 400);</span>
-<span class="nc" id="L353">        frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);</span>
-<span class="nc" id="L354">        frame.setVisible(true);</span>
+<span class="nc" id="L371">        frame.setSize(600, 400);</span>
+<span class="nc" id="L372">        frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);</span>
+<span class="nc" id="L373">        frame.setVisible(true);</span>
         
-<span class="nc" id="L356">        frame.getContentPane().add(cp);</span>
-<span class="nc" id="L357">    }</span>
+<span class="nc" id="L375">        frame.getContentPane().add(cp);</span>
+<span class="nc" id="L376">    }</span>
     
+    /**
+     * Produces a table to display operation results
+     * @param A Data to build table from
+     */
     private void produceTable(double[][] A){
-<span class="nc" id="L360">        Object[][] B = new Object [A.length][A.length];</span>
+<span class="nc" id="L383">        Object[][] B = new Object [A.length][A.length];</span>
         
-<span class="nc" id="L362">        String[] columnNames = new String[A.length];</span>
+<span class="nc" id="L385">        String[] columnNames = new String[A.length];</span>
         
-<span class="nc bnc" id="L364" title="All 2 branches missed.">        for(int i = 0; i&lt;A.length; i++){</span>
-<span class="nc" id="L365">            columnNames[i] = &quot;&quot;;</span>
-<span class="nc bnc" id="L366" title="All 2 branches missed.">            for(int j = 0; j&lt;A.length; j++){</span>
-<span class="nc" id="L367">                B[i][j] = Double.toString(A[i][j]);</span>
+<span class="nc bnc" id="L387" title="All 2 branches missed.">        for(int i = 0; i&lt;A.length; i++){</span>
+<span class="nc" id="L388">            columnNames[i] = &quot;&quot;;</span>
+<span class="nc bnc" id="L389" title="All 2 branches missed.">            for(int j = 0; j&lt;A.length; j++){</span>
+<span class="nc" id="L390">                B[i][j] = Double.toString(A[i][j]);</span>
             }
         }
         
-<span class="nc" id="L371">        JTable jTable1 = new javax.swing.JTable();</span>
-<span class="nc" id="L372">        jTable1.setModel(new javax.swing.table.DefaultTableModel(B, columnNames));</span>
+<span class="nc" id="L394">        JTable jTable1 = new javax.swing.JTable();</span>
+<span class="nc" id="L395">        jTable1.setModel(new javax.swing.table.DefaultTableModel(B, columnNames));</span>
         
-<span class="nc" id="L374">        JScrollPane scrollPane = new JScrollPane(jTable1);</span>
-<span class="nc" id="L375">        jTable1.setFillsViewportHeight(true);</span>
+<span class="nc" id="L397">        JScrollPane scrollPane = new JScrollPane(jTable1);</span>
+<span class="nc" id="L398">        jTable1.setFillsViewportHeight(true);</span>
             
-<span class="nc" id="L377">        JFrame frame = new JFrame(&quot;Charts&quot;);</span>
+<span class="nc" id="L400">        JFrame frame = new JFrame(&quot;Charts&quot;);</span>
         
-<span class="nc" id="L379">        frame.setSize(600, 400);</span>
-<span class="nc" id="L380">        frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);</span>
-<span class="nc" id="L381">        frame.setVisible(true);</span>
+<span class="nc" id="L402">        frame.setSize(600, 400);</span>
+<span class="nc" id="L403">        frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);</span>
+<span class="nc" id="L404">        frame.setVisible(true);</span>
         
-<span class="nc" id="L383">        frame.getContentPane().add(scrollPane);    </span>
-<span class="nc" id="L384">    }</span>
-    
-    
+<span class="nc" id="L406">        frame.getContentPane().add(scrollPane);    </span>
+<span class="nc" id="L407">    }</span>
     
     /**
      * @param args the command line arguments
@@ -395,31 +416,31 @@ public class GUI extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-<span class="nc bnc" id="L398" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
-<span class="nc bnc" id="L399" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
-<span class="nc" id="L400">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
-<span class="nc" id="L401">                    break;</span>
+<span class="nc bnc" id="L419" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
+<span class="nc bnc" id="L420" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
+<span class="nc" id="L421">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
+<span class="nc" id="L422">                    break;</span>
                 }
             }
-<span class="nc" id="L404">        } catch (ClassNotFoundException ex) {</span>
-<span class="nc" id="L405">            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L406">        } catch (InstantiationException ex) {</span>
-<span class="nc" id="L407">            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L408">        } catch (IllegalAccessException ex) {</span>
-<span class="nc" id="L409">            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L410">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
-<span class="nc" id="L411">            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L412">        }</span>
+<span class="nc" id="L425">        } catch (ClassNotFoundException ex) {</span>
+<span class="nc" id="L426">            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L427">        } catch (InstantiationException ex) {</span>
+<span class="nc" id="L428">            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L429">        } catch (IllegalAccessException ex) {</span>
+<span class="nc" id="L430">            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L431">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
+<span class="nc" id="L432">            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L433">        }</span>
         //&lt;/editor-fold&gt;
         //&lt;/editor-fold&gt;
 
         /* Create and display the form */
-<span class="nc" id="L417">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
+<span class="nc" id="L438">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
             public void run() {
-<span class="nc" id="L419">                new GUI().setVisible(true);</span>
-<span class="nc" id="L420">            }</span>
+<span class="nc" id="L440">                new GUI().setVisible(true);</span>
+<span class="nc" id="L441">            }</span>
         });
-<span class="nc" id="L422">    }</span>
+<span class="nc" id="L443">    }</span>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Add;

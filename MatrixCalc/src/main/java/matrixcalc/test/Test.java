@@ -13,6 +13,7 @@ public class Test {
      * Tests multiplication speeds by average
      * @param size size of matrix
      * @param runs amount of runs to be done. Average is printed
+     * @return Average of 10 tests
      */
     public static double testMultiplicationSpeed(int size, int runs){
         
@@ -38,6 +39,7 @@ public class Test {
      * Tests running time for determinant algorithm
      * @param size size of matrix
      * @param runs Amount of runs. Average is printed
+     * @return Average of 10 tests
      */
     public static double testDeterminantSpeed(int size, int runs){
         

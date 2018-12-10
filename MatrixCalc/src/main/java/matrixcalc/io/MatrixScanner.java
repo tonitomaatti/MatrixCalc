@@ -10,7 +10,7 @@ public class MatrixScanner {
     /**
      * Takes matrix from GUI in string form and returns it in double for math operations
      * @param input Matrix in string
-     * @return
+     * @return matrix in double[][]
      */
     public static double[][] buildMatrixFromGUI(String input){
         String[] numbers = input.split(",");

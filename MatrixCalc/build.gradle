@@ -11,9 +11,7 @@ if (!hasProperty('mainClass')) {
     ext.mainClass = 'matrixcalc.Main'
 }
 
-//run {
-//    standardInput = System.in
-//}
+
 
 repositories {
     mavenCentral()
@@ -34,6 +32,8 @@ dependencies {
         }
     }
     
+    runtime "org.slf4j:slf4j-simple:1.7.25"
+    
     // https://mvnrepository.com/artifact/jfree/jfreechart
     compile group: 'jfree', name: 'jfreechart', version: '1.0.12'
 
@@ -42,10 +42,16 @@ dependencies {
 
 mainClassName = 'matrixcalc.domain.Main'
 
+task stage {
+  dependsOn installDist
+}
 
 
 jar {
     manifest {
         attributes 'Main-Class': 'matrixcalc.domain.Main'
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
     }
 }

@@ -1,6 +1,6 @@
-package matrixcalc;
 
-import matrixcalc.domain.Substraction;
+package matrixcalc.io;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -11,11 +11,11 @@ import static org.junit.Assert.*;
 
 /**
  *
- *
+ * @author <>
  */
-public class SubstractionTest {
+public class MatrixScannerTest {
     
-    public SubstractionTest() {
+    public MatrixScannerTest() {
     }
     
     @BeforeClass
@@ -33,25 +33,21 @@ public class SubstractionTest {
     @After
     public void tearDown() {
     }
-
     
     @Test
-    public void substractionWorksCorrectly(){
-        double[][] testMatrix = new double[2][2];
-        testMatrix[0][0] = 1;
-        testMatrix[0][1] = 2;
-        testMatrix[1][0] = 3;
-        testMatrix[1][1] = 4;
+    public void scannerProducesCorrectMatrix(){
+        String testString = "1,2,3,4";
         
-        
-        testMatrix = Substraction.substract(testMatrix, testMatrix);
+        double[][] testMatrix = MatrixScanner.buildMatrixFromGUI(testString);
         
         double[][] correctMatrix = new double[2][2];
-        correctMatrix[0][0] = 1-1;
-        correctMatrix[0][1] = 2-2;
-        correctMatrix[1][0] = 3-3;
-        correctMatrix[1][1] = 4-4;
+        correctMatrix[0][0] = 1;
+        correctMatrix[0][1] = 2;
+        correctMatrix[1][0] = 3;
+        correctMatrix[1][1] = 4;
         
         Assert.assertArrayEquals(testMatrix, correctMatrix);
+        
     }
+    
 }

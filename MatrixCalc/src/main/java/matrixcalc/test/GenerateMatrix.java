@@ -24,7 +24,6 @@ public class GenerateMatrix {
                 A[i][j] = r.nextDouble()*(maxRange-minRange)+minRange;
             }
         }
-        
         return A;
     }
 }

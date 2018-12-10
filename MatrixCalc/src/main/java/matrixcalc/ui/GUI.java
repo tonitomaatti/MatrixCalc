@@ -1,11 +1,8 @@
-
 package matrixcalc.ui;
-
 
 import matrixcalc.domain.Addition;
 import matrixcalc.domain.Multiplication;
 import matrixcalc.domain.Substraction;
-import matrixcalc.io.MatrixPrinter;
 import matrixcalc.io.MatrixScanner;
 import matrixcalc.test.Test;
 import org.jfree.chart.ChartFactory;
@@ -19,8 +16,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 /**
- *
- * Basically done with help of https://netbeans.org/kb/docs/java/quickstart-gui.html
+ * Basically done with help of https://netbeans.org/kb/docs/java/quickstart-gui.html and Netbeans GUI builder.
  */
 public class GUI extends javax.swing.JFrame {
 
@@ -263,7 +259,10 @@ public class GUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Does an addition from user input
+     */
     private void AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddActionPerformed
         consoleOut.setText(consoleOut.getText()+"ADDITION:\n");
         double[][] a = MatrixScanner.buildMatrixFromGUI(MatrixA.getText());
@@ -271,7 +270,10 @@ public class GUI extends javax.swing.JFrame {
         double[][] added = Addition.add(a, b);
         produceTable(added);
     }//GEN-LAST:event_AddActionPerformed
-
+    
+    /**
+     * Does a substraction from user input
+     */
     private void SubstractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubstractActionPerformed
         consoleOut.setText(consoleOut.getText()+"SUBSTRACTION:\n");
         double[][] a = MatrixScanner.buildMatrixFromGUI(MatrixA.getText());
@@ -279,7 +281,10 @@ public class GUI extends javax.swing.JFrame {
         double[][] substracted = Substraction.substract(a, b);
         produceTable(substracted);
     }//GEN-LAST:event_SubstractActionPerformed
-
+    
+    /**
+     * Calculates a determinant from user input
+     */
     private void DeterminantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeterminantActionPerformed
         consoleOut.setText(consoleOut.getText()+"Determinant:\n");
         double[][] a = MatrixScanner.buildMatrixFromGUI(MatrixA.getText());
@@ -287,7 +292,10 @@ public class GUI extends javax.swing.JFrame {
         determinantOut.setText(Double.toString(determinant));
         System.out.println(determinant);
     }//GEN-LAST:event_DeterminantActionPerformed
-
+    
+    /**
+     * Does a multiplication from user input
+     */
     private void MultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MultiplyActionPerformed
         consoleOut.setText(consoleOut.getText()+"MULTIPLICATION:\n");
         double[][] a = MatrixScanner.buildMatrixFromGUI(MatrixA.getText());
@@ -295,7 +303,10 @@ public class GUI extends javax.swing.JFrame {
         double[][] multiplied = Multiplication.multiply(a, b);
         produceTable(multiplied);
     }//GEN-LAST:event_MultiplyActionPerformed
-
+    
+    /**
+     * Runs a multiplication test
+     */
     private void MultiplyTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MultiplyTestActionPerformed
         String testSize = multiplyTestSize.getSelectedItem();
         int maxSize = Integer.parseInt(testSize.substring(2));
@@ -314,7 +325,10 @@ public class GUI extends javax.swing.JFrame {
         }
         produceChart("Multiply", results);
     }//GEN-LAST:event_MultiplyTestActionPerformed
-
+    
+    /**
+     * Runs a determinant test
+     */
     private void DeterminantTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeterminantTestActionPerformed
         String testSize = determinantTestSize.getSelectedItem();
         int maxSize = 0;
@@ -338,7 +352,12 @@ public class GUI extends javax.swing.JFrame {
         }
         produceChart("Determinant",results);
     }//GEN-LAST:event_DeterminantTestActionPerformed
-
+    
+    /**
+     * Takes data name and data to produce a chart
+     * @param name Name for data
+     * @param results Results from tests, to be plotted
+     */
     private void produceChart(String name, double[][] results){
         DefaultXYDataset ds = new DefaultXYDataset();
         ds.addSeries(name, results);
@@ -356,6 +375,10 @@ public class GUI extends javax.swing.JFrame {
         frame.getContentPane().add(cp);
     }
     
+    /**
+     * Produces a table to display operation results
+     * @param A Data to build table from
+     */
     private void produceTable(double[][] A){
         Object[][] B = new Object [A.length][A.length];
         
@@ -382,8 +405,6 @@ public class GUI extends javax.swing.JFrame {
         
         frame.getContentPane().add(scrollPane);    
     }
-    
-    
     
     /**
      * @param args the command line arguments

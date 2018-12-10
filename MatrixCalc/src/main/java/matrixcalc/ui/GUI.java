@@ -254,6 +254,12 @@ public class GUI extends javax.swing.JFrame {
         determinantTestSize.add("1800");
         determinantTestSize.add("1900");
         determinantTestSize.add("2000");
+        determinantTestSize.add("2100");
+        determinantTestSize.add("2200");
+        determinantTestSize.add("2300");
+        determinantTestSize.add("2400");
+        determinantTestSize.add("2500");
+        determinantTestSize.add("2600");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

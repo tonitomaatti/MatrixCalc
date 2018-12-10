@@ -2,7 +2,7 @@
 Matrix calculator for school project
 
 Very cool, such algorithms, wow!
-
+* [HowTo](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/HowTo.md)
 * [Javadoc](http://tonitomaatti.github.io/MatrixCalc/javadoc/index.html)
 * [Jacoco](http://tonitomaatti.github.io/MatrixCalc/jacoco/test/html/index.html)
 * [Definition](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Definition.md)
@@ -16,10 +16,3 @@ Very cool, such algorithms, wow!
 - [Week 4](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Weekly%20Report%204.md)
 - [Week 5](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Weekly%20Report%205.md)
 - [Week 6](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Weekly%20Report%206.md)
-
-## HowTo
-
-- Run gradle from terminal or run main (or GUI). 
-- A GUI interface should work, hopefully pretty self-explanatory.
-- matrixcacltodo.txt at the root has some examples to run from main if GUI fails
-

@@ -10,7 +10,7 @@ with established time complexities. The theoretical slope is fitted by trying to
 
 ## For Multiplication
 
-![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Resources/MultiplicationTimeAnalysis.png)
+![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Resources/MultiplicationTimeAnalysis1.png)
 
 Multiplication is tested with sizes of power of two. This is because the algorithm expands every matrix to power of two before
 Strassen algorithm.

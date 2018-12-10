@@ -14,7 +14,7 @@ Multiplication is tested with sizes of power of two. This is because the algorit
 Strassen algorithm.
 
 | Size | Running Time (ms) | 2^81 Curve (ms) |
-|------|-------------------|-----------------|
+|:----:|:-----------------:|:---------------:|
 |  1   | 0                 | 0               |
 | 2    | 0                 | 0               |
 | 4    | 0                 | 0               |

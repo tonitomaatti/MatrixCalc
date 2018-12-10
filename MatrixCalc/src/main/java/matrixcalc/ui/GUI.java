@@ -226,6 +226,11 @@ public class GUI extends javax.swing.JFrame {
         multiplyTestSize.add("2^8");
         multiplyTestSize.add("2^9");
         multiplyTestSize.add("2^10");
+        multiplyTestSize.add("2^11");
+        multiplyTestSize.add("2^12");
+        multiplyTestSize.add("2^13");
+        multiplyTestSize.add("2^14");
+        multiplyTestSize.add("2^15");
         multiplyTestSize.getAccessibleContext().setAccessibleName("");
         multiplyTestSize.getAccessibleContext().setAccessibleDescription("");
         determinantTestSize.getAccessibleContext().setAccessibleName("");

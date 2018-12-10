@@ -60,3 +60,6 @@ Determinant does a LU decomposition and calculates determinant from the upper ma
 A slightly more erratic behavior. 
 
 ![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Resources/DeterminantTimeAnalysis1.png)
+
+
+Interesting to note that determinant seems to run faster with sizes that I tested. If theoretical complexities hold, determinant should start running slower at some point.

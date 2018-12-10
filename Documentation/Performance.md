@@ -29,7 +29,7 @@ Strassen algorithm.
 
 ![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Resources/MultiplicationTimeAnalysis1.png)
 
-
+Multiplication seems to follow the theoretical curve pretty closely
 
 
 ## For Determinant

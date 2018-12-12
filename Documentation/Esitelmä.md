@@ -25,3 +25,10 @@
   
 - **Aika-analyysiä:** 
   - https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Performance.md
+
+
+- **Kuvia:**
+
+![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Resources/GUI.png)
+![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Resources/tulos.png)
+![](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Resources/käyrä.png)

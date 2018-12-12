@@ -8,6 +8,7 @@ Very cool, such algorithms, wow!
 * [Definition](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Definition.md)
 * [Implementation](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Implementation.md)
 * [Performance](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Performance.md)
+* [Esitelmä](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Esitelm%C3%A4.md)
 
 ## Weekly reports:
 - [Week 1](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/Weekly%20Report%201.md)

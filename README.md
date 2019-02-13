@@ -1,7 +1,8 @@
 # MatrixCalc
-Matrix calculator for school project
+Matrix calculator for school project.
 
-Very cool, such algorithms, wow!
+Main purpose was to implement interesting algorithms. The calculator uses [Strassen](https://en.wikipedia.org/wiki/Strassen_algorithm) for multiplication and [Doolittle](https://en.wikipedia.org/wiki/LU_decomposition#Doolittle_algorithm) for determinant.
+
 * [HowTo](https://github.com/tonitomaatti/MatrixCalc/blob/master/Documentation/HowTo.md)
 * [Javadoc](http://tonitomaatti.github.io/MatrixCalc/javadoc/index.html)
 * [Jacoco](http://tonitomaatti.github.io/MatrixCalc/jacoco/test/html/index.html)
